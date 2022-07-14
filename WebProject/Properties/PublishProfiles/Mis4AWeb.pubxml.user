@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\MyMisWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="admin.aspx">
+      <publishTime>09/14/2018 21:23:30</publishTime>
+    </File>
+    <File Include="allMember.html">
+      <publishTime>09/14/2018 21:23:30</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Client.dll">
+      <publishTime>09/18/2018 13:32:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>09/18/2018 11:06:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Owin.dll">
+      <publishTime>09/18/2018 11:21:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>09/18/2018 11:06:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>09/18/2018 11:06:57</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>09/18/2018 11:06:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>09/18/2018 11:06:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>09/17/2018 08:34:49</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>09/18/2018 11:06:57</publishTime>
+    </File>
+    <File Include="bin/WebProject.dll">
+      <publishTime>09/19/2018 08:18:50</publishTime>
+    </File>
+    <File Include="bin/WebProject.pdb">
+      <publishTime>09/19/2018 08:18:50</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.AspNet.SignalR.Core.resources.dll">
+      <publishTime>09/18/2018 11:07:52</publishTime>
+    </File>
+    <File Include="CSS/jquery-ui-demo-ie8.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/jquery-ui-demo.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/jquery.fileupload-noscript.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/jquery.fileupload-ui-noscript.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/jquery.fileupload-ui.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/jquery.fileupload.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/layout.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/loginReg.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/rating.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/style.css">
+      <publishTime>09/14/2018 21:23:32</publishTime>
+    </File>
+    <File Include="CSS/thinscroll.css">
+      <publishTime>09/16/2018 15:51:36</publishTime>
+    </File>
+    <File Include="default.html">
+      <publishTime>09/16/2018 15:52:40</publishTime>
+    </File>
+    <File Include="dprocess.ashx">
+      <publishTime>09/14/2018 21:23:30</publishTime>
+    </File>
+    <File Include="fileupload.aspx">
+      <publishTime>09/15/2018 17:21:14</publishTime>
+    </File>
+    <File Include="img/3C3apOp.png">
+      <publishTime>09/14/2018 21:23:34</publishTime>
+    </File>
+    <File Include="img/loading.gif">
+      <publishTime>09/14/2018 21:23:34</publishTime>
+    </File>
+    <File Include="img/progressbar.gif">
+      <publishTime>09/14/2018 21:23:34</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>08/08/2013 13:42:38</publishTime>
+    </File>
+    <File Include="index_no_generated_proxy.html">
+      <publishTime>09/18/2018 11:04:01</publishTime>
+    </File>
+    <File Include="js/canvasjs.min.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/dateManupulate.js">
+      <publishTime>01/13/2017 10:16:08</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload-audio.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload-image.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload-process.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload-ui.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload-validate.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload-video.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.fileupload.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.iframe-transport.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/jquery_1.11.0.min.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/json-serialization.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/LoginReg.js">
+      <publishTime>09/15/2018 17:21:54</publishTime>
+    </File>
+    <File Include="js/main.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/p5.dom.js">
+      <publishTime>09/14/2018 21:23:36</publishTime>
+    </File>
+    <File Include="js/p5.js">
+      <publishTime>09/14/2018 21:23:38</publishTime>
+    </File>
+    <File Include="js/rating.js">
+      <publishTime>09/16/2018 15:30:46</publishTime>
+    </File>
+    <File Include="js/session.js">
+      <publishTime>09/14/2018 21:23:38</publishTime>
+    </File>
+    <File Include="js/sketch.js">
+      <publishTime>09/14/2018 21:23:38</publishTime>
+    </File>
+    <File Include="js/Vendor/jquery.ui.widget.js">
+      <publishTime>09/14/2018 21:23:38</publishTime>
+    </File>
+    <File Include="LoginReg.html">
+      <publishTime>09/14/2018 23:03:18</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/18/2018 13:32:16</publishTime>
+    </File>
+    <File Include="Play.html">
+      <publishTime>09/18/2018 16:10:39</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>09/19/2018 08:25:05</publishTime>
+    </File>
+    <File Include="scheduleRelated.ashx">
+      <publishTime>09/14/2018 21:23:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.6.4.js">
+      <publishTime>09/18/2018 11:07:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.6.4.min.js">
+      <publishTime>09/18/2018 11:07:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-1.1.3.js">
+      <publishTime>09/18/2018 11:04:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-1.1.3.min.js">
+      <publishTime>09/18/2018 11:04:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.3.0.js">
+      <publishTime>09/18/2018 11:07:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.3.0.min.js">
+      <publishTime>09/18/2018 11:07:19</publishTime>
+    </File>
+    <File Include="UploadProgress.aspx">
+      <publishTime>09/15/2018 17:19:28</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/19/2018 08:21:58</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

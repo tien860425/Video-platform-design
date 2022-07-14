@@ -1,0 +1,5 @@
+2018-08-31 16:49:54,654 ERROR 387 WebProject.admin - ExecuteNonQuery 必須有開啟與可用的 Connection。連接目前的狀態已關閉。
+2018-08-31 17:37:07,282 ERROR 303 WebProject.admin - 無效的資料行名稱 'Desciption'。
+2018-08-31 20:05:47,251 ERROR 312 WebProject.admin - 無效的資料行名稱 'Desciption'。
+2018-08-31 20:17:24,667 ERROR 0 WebProject.admin - 無效的資料行名稱 'Desciption'。
+2018-08-31 20:39:21,069 ERROR 434 WebProject.admin - ExecuteNonQuery 必須有開啟與可用的 Connection。連接目前的狀態已關閉。

@@ -1,0 +1,7 @@
+D:\WebProject\StartApService\bin\Debug\StartApService.exe.config
+D:\WebProject\StartApService\bin\Debug\StartApService.exe
+D:\WebProject\StartApService\bin\Debug\StartApService.pdb
+D:\WebProject\StartApService\obj\Debug\StartApService.ProjectInstaller.resources
+D:\WebProject\StartApService\obj\Debug\StartApService.csproj.GenerateResource.Cache
+D:\WebProject\StartApService\obj\Debug\StartApService.exe
+D:\WebProject\StartApService\obj\Debug\StartApService.pdb

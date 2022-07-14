@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+.catagory {
+	width: 10%;
+	height:100%;
+	float: left;
+	padding-right: 0px;
+}
+/*.fclearfix{
+	clear:both;
+	width:100%;
+}*/
+.sclearfix{
+	clear:both;
+}
+
+.activead{
+	float: left;
+	width: 80%;
+}
+.search{
+	float: right;
+	width: 10%;
+	overflow: hidden;
+	height: 100%;
+}
+.tclearfix{
+	clear:both;
+}
+/*.imgcarousel{
+    height:120px;
+    max-height:150px;
+    width:auto;
+}*/ 

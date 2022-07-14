@@ -1,0 +1,42 @@
+﻿正在安裝組件 'd:\WebProject\StartApService\bin\Debug\StartApService.exe'。
+受影響的參數為:
+   logtoconsole = 
+   assemblypath = d:\WebProject\StartApService\bin\Debug\StartApService.exe
+   logfile = d:\WebProject\StartApService\bin\Debug\StartApService.InstallLog
+正在復原組件 'd:\WebProject\StartApService\bin\Debug\StartApService.exe'。
+受影響的參數為:
+   logtoconsole = 
+   assemblypath = d:\WebProject\StartApService\bin\Debug\StartApService.exe
+   logfile = d:\WebProject\StartApService\bin\Debug\StartApService.InstallLog
+正在安裝組件 'd:\WebProject\StartApService\bin\Debug\StartApService.exe'。
+受影響的參數為:
+   logtoconsole = 
+   assemblypath = d:\WebProject\StartApService\bin\Debug\StartApService.exe
+   logfile = d:\WebProject\StartApService\bin\Debug\StartApService.InstallLog
+正在安裝服務 Service1...
+正在記錄檔 Application 中建立 EventLog 來源 Service1...
+正在復原組件 'd:\WebProject\StartApService\bin\Debug\StartApService.exe'。
+受影響的參數為:
+   logtoconsole = 
+   assemblypath = d:\WebProject\StartApService\bin\Debug\StartApService.exe
+   logfile = d:\WebProject\StartApService\bin\Debug\StartApService.InstallLog
+正將來源 Service1 的事件記錄檔恢復成之前的狀態。
+在 System.Diagnostics.EventLogInstaller 安裝程式的復原階段中發生例外狀況。
+System.Security.SecurityException: 找不到來源，但無法搜尋部分或全部的事件記錄檔。無法存取的記錄檔: Security。
+在安裝的復原階段發生例外狀況。將略過此例外狀況，而繼續復原。然而，復原完成之後，電腦可能將無法完全還原成原來的狀態。
+正在安裝組件 'd:\WebProject\StartApService\bin\Debug\StartApService.exe'。
+受影響的參數為:
+   logtoconsole = 
+   assemblypath = d:\WebProject\StartApService\bin\Debug\StartApService.exe
+   logfile = d:\WebProject\StartApService\bin\Debug\StartApService.InstallLog
+正在安裝服務 Service1...
+正在記錄檔 Application 中建立 EventLog 來源 Service1...
+正在復原組件 'd:\WebProject\StartApService\bin\Debug\StartApService.exe'。
+受影響的參數為:
+   logtoconsole = 
+   assemblypath = d:\WebProject\StartApService\bin\Debug\StartApService.exe
+   logfile = d:\WebProject\StartApService\bin\Debug\StartApService.InstallLog
+正將來源 Service1 的事件記錄檔恢復成之前的狀態。
+在 System.Diagnostics.EventLogInstaller 安裝程式的復原階段中發生例外狀況。
+System.Security.SecurityException: 找不到來源，但無法搜尋部分或全部的事件記錄檔。無法存取的記錄檔: Security。
+在安裝的復原階段發生例外狀況。將略過此例外狀況，而繼續復原。然而，復原完成之後，電腦可能將無法完全還原成原來的狀態。

@@ -1,0 +1,1156 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>資管4A影視平台</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/rating.css" rel="stylesheet" type="text/css">
+    <link href="css/thinscroll.css" rel="stylesheet" type="text/css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="Scripts/jquery-3.3.1.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/rating.js"></script>
+    <!--<script type="text/javascript" src="Scripts/jquery.signalR-1.1.3.min.js"></script>-->
+    <script src="Scripts/jquery.signalR-2.3.0.min.js"></script>
+    <script type="text/javascript" src="signalr/hubs"></script>
+    <script type="text/javascript" src="js/dateManupulate.js"></script>
+    <!--<script type="text/javascript" src="js/p5.dom.js"></script>-->
+    <!--    <script type="text/javascript" src="js/sketch.js"></script>-->
+    <script>
+
+
+
+    </script>
+    <style>
+        #myInput {
+            background-image: url('/img/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            margin: auto;
+            width: 120px;
+            /*width: 120px;*/
+            height: 120px;
+            -webkit-animation: spin 5s linear infinite; /* Safari */
+            animation: spin 5s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+            #myTable th, #myTable td {
+                text-align: left;
+                padding: 2px;
+                border: 1px solid #ddd;
+            }
+
+            #myTable tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+                #myTable tr.header, #myTable tr:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .C1 {
+            width: 20%;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+
+        .C2 {
+            width: 20%;
+        }
+
+        .C3 {
+            width: 52%;
+        }
+
+        .C4 {
+            width: 8%;
+        }
+
+        .toppinp {
+            z-index: 200;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            /* top: 35px;
+            left: 0;*/
+            background-color: cyan;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            align-items: center;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #ff0000;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav button {
+                padding: 8px 8px 8px 8px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #ff0000;
+                display: block;
+                transition: 0.3s;
+                width: 80%;
+                left: 10%;
+            }
+
+                .sidenav button:hover {
+                    color: #f1f1f1;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        #main {
+            transition: margin-left .5s;
+            /*padding: 8px;*/
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+        /*#video-wrap {
+            width: 500px;
+            position: relative;
+        }*/
+
+        video {
+            width: 100%;
+            height: auto;
+            border-style: groove;
+            border-width: 7px;
+            border-color: coral;
+            max-height: 600px;
+        }
+
+        /*#buttonbar {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }*/
+
+        #buttonbar button {
+            /*margin: 5px 0 0;*/
+            border: 0;
+            color: #fff;
+            background: #f5246d;
+            font: 24px FontAwesome;
+            cursor: pointer;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 100%;
+        }
+
+
+        #play::before {
+            content: "\f04b";
+            /*font-size: .12em;*/
+            font-size: 24px;
+        }
+
+        #pause::before {
+            content: "\f04c";
+            font-size: 24px;
+        }
+
+        #volumeUp::before {
+            content: "\f028";
+            font-size: 24px;
+        }
+
+        #volumeDown::before {
+            content: "\f027";
+            font-size: 24px;
+        }
+
+        #volumeOff::before {
+            content: "\f026";
+            font-size: 24px;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        .icon-bar {
+            position: fixed;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+            .icon-bar a {
+                display: block;
+                text-align: center;
+                padding: 16px;
+                transition: all 0.3s ease;
+                color: white;
+                font-size: 20px;
+            }
+
+                .icon-bar a:hover {
+                    background-color: #000;
+                }
+
+        .facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        /*討論區*/
+        .Chatcontainer {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .Chatdarker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+
+        .Chatcontainer::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /*.Chatcontainer span {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }*/
+        .Chattime-right {
+            float: right;
+            color: #aaa;
+        }
+
+        .Chattime-left {
+            float: left;
+            color: #999;
+        }
+
+        .right {
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">資管4A影視平台</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a id="home" onclick="LeavingPage();" href="#">Home</a></li>
+                    <li id="Admin" style=" display:none"><a id="adminhref" href="#">管理員</a></li>
+                    <li><a id="personal" onclick="LeavingPage();" href="#">我的資料</a></li>
+                    <!--<li><a id="matcher" onclick="LeavingPage();" href="#">需求媒合</a></li>
+                    <li><a id="communicate" onclick="LeavingPage();" href="#">技術交流</a></li>-->
+                    <li><a id="upload" onclick="LeavingPage();" href="#">影片上傳</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="welcome" href="javascript:void(0)"><span id="welcomespan" class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a id="logout" href="javascript:void(0)"><span id="logoutspan" class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="A"><span class="fa fa-spinner fa-spin"></span>懸疑類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="B"><span class="fa fa-circle-o-notch fa-spin"></span>動作類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="C"><span class="fa fa-refresh fa-spin"></span>恐怖類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="D"><span class="fa fa fa-heartbeat fa-spin"></span>愛情類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="E"><span class="fa fa-spinner fa-spin"></span>動漫類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="F"><span class="fa fa-circle-o-notch fa-spin"></span>微電影類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="G"><span class="fa fa-refresh fa-spin"></span>喜劇類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="H"><span class="fa fa fa-heartbeat fa-spin"></span>科幻類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="I"><span class="fa fa-refresh fa-spin"></span>教學類</button>
+            <button onclick="reactClick(this);" type="button" class="btn btn-success BB" id="J"><span class="fa fa fa-heartbeat fa-spin"></span>其他類</button>
+        </div>
+        <div id="mySidenav1" class="sidenav" style="align-items:center">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+            <!--<fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>選擇查尋項目:</legend>
+                <label for="影片編號">影片編號</label>
+                <input type="radio" name="kind"id="mvid" value="mvid">
+                <label for="片名">片名</label>
+                <input type="radio" name="kind" checked id="titile" value="title">
+                <label for="關鍵字">關鍵字</label>
+                <input type="radio" name="kind" id="titile" value="title">
+           </fieldset>-->
+            <div>
+                <h4>選擇查尋項目: </h4>
+                <label class="radio-inline">
+                    <input class="kindsel" type="radio" name="kind" checked value="1">影片編號
+                </label>
+                <label class="radio-inline">
+                    <input class="kindsel" type="radio" name="kind" checked value="2">片名
+                </label>
+                <label class="radio-inline">
+                    <input class="kindsel" type="radio" name="kind" value="3">關鍵字
+                </label>
+            </div>
+        <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="輸入片名.." title="Type in a name">
+           
+            <table id="myTable" style="width:100%">
+                <tr>
+                    <th class="C1">片名</th>
+                    <th class="C2">簡介</th>
+                    <th class="C3">上傳者</th>
+                    <th class="C4">評價</th>
+                </tr>
+                <tr>
+                    <td class="C1">Jill</td>
+                    <td class="C2"><p style="overflow:scroll">Goson   hdhkjdfs dfjjdsf fdkjhjjdsf dfkjjdjf dfkjjdajf sakjjsaff sakjdf</p></td>
+                    <td class="C3">50</td>
+                    <td class="C4">50</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div id="main">
+            <div style="font-size:22px;cursor:pointer;float:left; width:25%;height:85%;background-color:lightyellow">
+                <div id="open" style="font-family:標楷體;font-style:italic;font-weight:900;font-size :28px;color:darkblue;border-color:black;border-style:groove;width:60%;background-color:#daf813" onclick="openNav()">&#9776; 選取影片類別</div>
+                <h3 style="font-family:標楷體">請對目前觀看的影片評分</h3>
+                <section class='rating-widget' style="background-color:lightgreen;">
+
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars text-center'>
+                        <ul id='stars'>
+                            <li class='star' title='Poor' data-value='1'>
+                                <i class='fa fa-star fa-fw'></i>
+                            </li>
+                            <li class='star' title='Fair' data-value='2'>
+                                <i class='fa fa-star fa-fw'></i>
+                            </li>
+                            <li class='star' title='Good' data-value='3'>
+                                <i class='fa fa-star fa-fw'></i>
+                            </li>
+                            <li class='star' title='Excellent' data-value='4'>
+                                <i class='fa fa-star fa-fw'></i>
+                            </li>
+                            <li class='star' title='WOW!!!' data-value='5'>
+                                <i class='fa fa-star fa-fw'></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class='success-box'>
+                        <div class='clearfix'></div>
+                        <!--<img alt='tick image' width='32' src='img/3C3apOp.png' />-->
+                        <button id="ratingBtn" style=" border-radius: 20%; display:none;" onclick="RatingSend()">送出</button>
+                        <div class='text-message'></div>
+                    </div>
+
+
+
+                </section>
+                <h3 style="font-family:標楷體">對本影片的建議...</h3>
+                <div id="discuss" style="height:450px;overflow-y:scroll">
+
+                    <!--<div class="Chatcontainer">
+                        <span>aaa:</span>
+                        <p>Hello. How are you today?</p>
+                        <span class="Chattime-right">11:00</span>
+                    </div>
+
+                    <div class="Chatcontainer Chatdarker">
+                        <span class="right">aaa:</span>
+                        <p>Hey! I'm fine. Thanks for asking!</p>
+                        <span class="Chattime-left">11:01</span>
+                    </div>-->
+
+
+
+                </div>
+                <div style="height:10%;left:0px;width:90%;float:left">
+                    <textarea id="commentArea" style="overflow: scroll; width: 100%;"></textarea>
+                </div>
+                <div style="height:10%;width:10%;right:0px;float:right">
+                    <button id="commentBtn" style=" border-radius: 20%; " onclick="CommentSend()">送出</button>
+                </div>
+            </div>
+            <div class=" container" style="width: 75%;text-align:center;float:right">
+                <h2>影片播放區(<span id="vtype">1234</span>)</h2>
+                <div style="float:right;width:5%;right:1%">
+                    <div class="icon-bar" style="right:0px">
+                        <ul>
+
+                            <li>
+                                <div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+                                    <a class="facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=/play.html', 'Facebook', 'width=600,height=300,left=' + (screen.availWidth / 2 - 300) + ',top=' + (screen.availHeight / 2 - 150) + ''); return false;" href="http://www.facebook.com/sharer.php?u=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html">
+
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="twitter" data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+
+                                    <a class="twitter" onclick="window.open('http://twitter.com/share?url=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html&amp;text=如何在自己的網站內實現Font%20Awesome%20icons?','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html&amp;text=如何在自己的網站內實現Font%20Awesome%20icons?">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="google">
+                                    <a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onclick="window.open('https://plus.google.com/share?url=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="linkedin">
+                                    <a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=https://simular.co/knowledge/online-resources/83-font-awesome-icons.html">
+
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="PlayArea" style="width: 95%; height: 30%; padding-left: 1%;float:left;">
+                    <div id="loading"  style="width:100%;background-color:lightcyan;top:0px;left:0px;z-index:200;display:none;height:600px;">
+                        <div class="loader"></div>
+                    </div>
+
+
+                    <video id="vid">
+                        <source id="vidsrc" src="#" type="video/mp4" />
+                    </video>
+                    <div id="buttonbar">
+                        <span id="total"></span>&nbsp&nbsp
+                        <button id="play" title="播放" onclick="playVid(); "></button>
+                        <button id="pause" title="暫停" onclick="document.getElementById('vid').pause(); played = false"></button>
+                        <button id="volumeUp" onclick="VolumnUpper();"></button>
+                        <button id="volumeDown" onclick="VolumnDn();"></button>
+                        <button id="volumeOff" onclick="muteToggle()"></button>
+                        <button id="fwd" title="重播" onclick="document.getElementById('vid').currentTime = 0; played = false;updateTime();"><i class="fa fa-refresh" style="font-size: 24px; color: white"></i></button>
+                        <button id="fwd" title="前進" onclick="forward(20)"><i class="fa fa-forward" style="font-size: 24px; color: white"></i></button>
+                        <button id="bwd" title="後退" onclick="rewind(-20)"><i class="fa fa-backward" style="font-size: 24px; color: white"></i></button>
+                        <button id="full" title="全螢幕" onclick="openFullscreen()"><i class="fa fa-expand" style="font-size:24px;color:white"></i></button>
+                        &nbsp&nbsp<span id="current"></span>
+                    </div>
+                    <span style="align-content:center">本片簡介</span>
+                    <div style="background-color:#b6ff00;border-style:solid;width:100%;height:100px">
+                        <p id="intro" style="width: 100%; height: 90px; overflow: scroll;text-align:left;"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--https://www.w3.org/2010/05/video/mediaevents.html-->
+    <br />
+    <!--<div id="maximize" style="position :absolute;width:100%;height:100%;background-color:lightcyan;top:0px;left:0px;z-index:200">
+        <div id="loading" class="loader"></div>
+    </div>-->
+
+
+
+
+    <div class="tclearfix" style="height:60px;background-color:black;left:0px;width:100%;text-align:center;padding-top:20px;clear:both">
+        <p style="color:white;top:20px;left:10px;">Copyright &copy; 2018 S.H.V.P影音平台</p>
+    </div>
+
+</body>
+</html>
+<script>
+    var UserName, Account;
+    var auth = 'No';
+    var HotArray = [];
+    var NewArray = [];
+    var HiGradeArray = [];
+    var played = false;
+    var url;
+    var urlS;
+    var gurl = window.location.protocol + "//" + window.location.host;
+    if (window.location.host.indexOf("localhost") >= 0) {
+        url = gurl + "/";
+        urlS = window.location.protocol + "//localhost/";
+    }
+    else {
+        url = gurl + "/";
+        urlS = url;
+    }
+    function reactClick(o) {
+        closeNav();
+        $("#open").hide();//
+        MVType = o.id;
+        renderTable();
+        openNav1();
+    }
+
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "10%";
+        document.getElementById("main").style.marginLeft = "10%";
+    }
+    function openNav1() {
+        document.getElementById("mySidenav1").style.width = "25%";
+        document.getElementById("main").style.marginLeft = "25%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+    function closeNav1() {
+        document.getElementById("mySidenav1").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        $("#open").show();//
+    }
+
+    function RatingSend() {
+        if (CurMovieID != "") {
+            if (ratingValue > 0) {
+                $.post(url + "dprocess.ashx", { qid: 'C', MovieID: CurMovieID, rating: ratingValue });//更新評分
+                responseMessage('評分已送出。');
+            }
+            else
+                alert("請先按星號!");
+        }
+    }
+    function CommentSend() {
+        if ($("#commentArea").val().trim() != "") {
+            $.post(url + "dprocess.ashx", { qid: 'D', MovieID: CurMovieID, Comment: $("#commentArea").val().trim() });//更新評價內容
+            //discusstm = Date.now();
+            //pollChatContent();
+            $.connection.myChatHub.server.sendGroupMessage(UserName, CurMovieID, MVTitle, $("#commentArea").val().trim());
+            //chatHubProxy.server.broadcastMessage(UserName, $("#commentArea").val().trim());
+            $.connection.PascalCasedMyDateTimeHub.server.PascalCasedGetServerDateTime().done(function (serverTime) {
+                var dd = new Date(serverTime);
+                discusstm = FormatDateTime(dd, "hh:mm:ss");
+
+            });
+            $("#commentArea").val('');
+        }
+        else
+            alert("請先輸入您的評語!");
+    }
+    //var timeHubProxy;
+    //var chatHubProxy;
+    $(function () {
+        // Connect Hubs without the generated proxy
+        //timeHubProxy = $.connection.PascalCasedMyDateTimeHub;
+        //chatHubProxy = $.connection.myChatHub;
+        // Register client function to be called by server
+        $.connection.myChatHub.client.appendNewMessage = function (clientName, message) {
+            addChat(clientName, message);
+        };
+        // Start the hub connection
+        addChat('Sys:', "Connecting Hub...");
+        $.connection.hub.start().done(function () {
+            $.connection.PascalCasedMyDateTimeHub.server.PascalCasedGetServerDateTime().done(function (serverTime) {
+                var dd = new Date(serverTime);
+                discusstm = FormatDateTime(dd, "hh:mm:ss");
+                addChat(name, "Hub connected.");
+
+            }).fail(function () {
+                addChat('Sys:', "Could not connect to Hub.");
+            });
+        });
+
+    });
+
+    $.connection.hub.disconnected(function () {
+        setTimeout(function () {
+            $.connection.hub.start();
+        }, 5000); // Re-start connection after 5 seconds
+    });
+
+    function addChat(name, msg) {
+        var markup;
+        if (name == UserName) {
+            markup = '<div class="Chatcontainer"><span>我:</span>' +
+            '<p>' + msg + '</p>' +
+            '<span class="Chattime-right">' + discusstm + '</span></div>';
+
+        }
+        else {
+            markup = '<div class="Chatcontainer Chatdarker"><span class="right">' + name + ':</span>' +
+            '<p>' + msg + '</p>' +
+            '<span class="Chattime-left">' + discusstm + '</span></div>';
+
+        }
+        $("#discuss").append(markup);
+        trytimes = 0;
+        setTimeout(scrollbm, 500);
+
+        //$("#discuss").animate({ scrollTop: $('#discuss').prop("scrollHeight") }, 1000);
+
+    }
+    //function pollChatContent() {
+    //    if (CurMovieID != '') {
+    //        $.get("scheduleRelated.ashx?qid=7&MovieID=" + CurMovieID + "&timepoll=" + discusstm, function (data, status) {
+    //            if (data != 'null') {
+    //                var obj = JSON.parse(data);
+    //                var markup='';
+
+    //                for (i = obj.length - 1; i >= 0; i--) {
+    //                    $("#discuss div:eq(0)").remove();
+    //                    if (obj[i].account == Account)
+    //                        markup += '<div class="Chatcontainer"><span>我:</span>' +
+    //                        '<p>' + obj[i].comment + '</p>' +
+    //                        '<span class="Chattime-right">' + obj[i].wtime + '</span></div>';
+    //                    else
+    //                        markup += '<div class="Chatcontainer Chatdarker"><span class="right">' + obj[i].Name + ':</span>' +
+    //                        '<p>' + obj[i].comment + '</p>' +
+    //                        '<span class="Chattime-left">' + obj[i].wtime + '</span></div>';
+    //                    if (i == 0)
+    //                        discusstm = obj[i].pdate;
+    //                }
+    //                $("#discuss").append(markup);
+    //            }
+    //        });
+    //        trytimes = 0;
+    //        setTimeout(scrollbm, 500);
+
+    //        //$("#discuss").animate({ scrollTop: $('#discuss').prop("scrollHeight") }, 1000);
+    //    }
+    //    //$("#table1 tr:eq(1)").remove();
+    //    //删除指定行（第二行）
+    //    //$("#table3 tr:gt(0):eq(1)").remove();
+    //    //var newRow = "<tr style=\"background:red;\"><td>新行第一列</td><td>新行第二列</td><td>新行第三列</td><td>新行第四列</td><td>新行第五列</td></tr>";
+    //    //$("#table3 tr:last").after(newRow);
+
+    //}
+    var trytimes = 0;
+    function scrollbm() {
+        var o = document.getElementById("discuss");
+        o.scrollTop = o.scrollHeight;
+        if (trytimes < 3) {
+            trytimes++;
+            setTimeout(scrollbm, 500);
+        }
+
+    }
+    function mySearchFunction() {
+        var input, filter, table, tr, td, i,j;
+        var index = parseInt(kindsel) - 1;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (kindsel != "3")
+        {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[index];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+        else {
+            for (i = 0; i < tr.length; i++) {
+                for (j = 0; j < 3;j++){
+                    td = tr[i].getElementsByTagName("td")[j];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                        break;                    }
+                }
+                if (j == 2) {
+                    tr[i].style.display = "none";
+                }
+            }
+            }
+
+        }
+    }
+    var Videlem = document.getElementById("vid");
+    var vol = 0.3;
+    function VolumnUpper() {
+        if (vol + 0.1 > 1) {
+            Videlem.volume = 1.0;
+            vol = 1;
+        }
+        else {
+            Videlem.volumn = vol + 0.1;
+            vol += 0.1;
+        }
+    }
+
+    function VolumnDn() {
+        if (vol - 0.1 < 0.3) {
+            Videlem.volume = 0.3;
+            vol = 0.3;
+        }
+        else {
+            Videlem.volumn = vol - 0.1;
+            vol -= 0.1;
+        }
+    }
+
+    function openFullscreen() {
+        if (Videlem.requestFullscreen) {
+            Videlem.requestFullscreen();
+        } else if (Videlem.mozRequestFullScreen) { /* Firefox */
+            Videlem.mozRequestFullScreen();
+        } else if (Videlem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            Videlem.webkitRequestFullscreen();
+        } else if (Videlem.msRequestFullscreen) { /* IE/Edge */
+            Videlem.msRequestFullscreen();
+        }
+    }
+    function muteToggle() {
+        if (Videlem.muted)
+            Videlem.muted = false;
+        else
+            Videlem.muted = true;
+    }
+    //0 = HAVE_NOTHING - no information whether or not the audio/video is ready
+    //1 = HAVE_METADATA - metadata for the audio/video is ready
+    //2 = HAVE_CURRENT_DATA - data for the current playback position is available, but not enough data to play next frame/millisecond
+    //3 = HAVE_FUTURE_DATA - data for the current and at least the next frame is available
+    //4 = HAVE_ENOUGH_DATA - enough data available to start playing
+
+    function playVid() {
+        if (Videlem.readyState >= 2 && played == false) {
+            Videlem.play();
+            if (PlayClickTime = 0)
+                $.post(url + "dprocess.ashx", { qid: 'A', MovieID: CurMovieID });//更新播放次數
+            $("#total").text(secTohhmmss(Videlem.duration));
+            $("#total").show();
+            played = true;
+            PlayClickTime++;
+            updateTime();
+            closeNav1();
+        }
+    }
+    function forward(param) {
+        if (Videlem.currentTime + param > Videlem.duration)
+            Videlem.currentTime = Videlem.duration;
+        else
+            Videlem.currentTime += param;
+        $("#total").text(secTohhmmss(Videlem.duration));
+        $("#current").text(secTohhmmss(Videlem.currentTime));
+
+    }
+    Videlem.ondurationchange = function () {
+        $("#loading").show();
+        $("#vid").hide();
+    }
+    Videlem.oncanplay = function () {
+        $("#loading").hide();
+        $("#vid").show();
+    }
+    function rewind(param) {
+        if (Videlem.currentTime - param < 0)
+            Videlem.currentTime = 0;
+        else
+            Videlem.currentTime -= param;
+        $("#total").text(secTohhmmss(Videlem.duration));
+        $("#current").text(secTohhmmss(Videlem.currentTime));
+    }
+    function updateTime() {
+        $("#current").text(secTohhmmss(Videlem.currentTime));
+        if (played)
+            setTimeout("updateTime()", 3000);
+    }
+    function pad(num, size) {
+        var s = num + "";
+        while (s.length < size) s = "0" + s;
+        return s;
+    }
+    function secTohhmmss(sec) {
+        ssec = Math.round(sec);
+        var hr = Math.floor(ssec / 3600);
+        var min = Math.floor((ssec - hr * 3600) / 60);
+        var nsec = ssec - hr * 3600 - min * 60;
+        return pad(hr, 2) + ':' + pad(min, 2) + ':' + pad(nsec, 2);
+    }
+    var typeNames = ["懸疑", "動作", "恐怖", "愛情", "動漫", "微電影", "喜劇", "科幻", "教學", "其他"];
+    var typeClass = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+    var CurMovieID = "";
+    var MVType, MVTypeName, MVTitle;
+    var PlayClickTime = 0;//change movieid時reset
+    var curFileUrl=''; //先取得網址字串，假設此頁網址為「play.aspx?type=A&mvid=A-A0003-00000&file=url」
+    var uurl = location.href;
+    var paraNum = 0;
+    if (uurl.indexOf('?') != -1) {
+        var idvalue = [];
+        //在此直接將各自的參數資料切割放進ary中
+        var ary = uurl.split('?')[1].split('&');
+        //此時ary的內容為：
+        //ary[0] = 'id=U001'，ary[1] = 'name=GQSM'
+
+        //下迴圈去搜尋每個資料參數
+        for (i = 0; i <= ary.length - 1; i++) {
+            idvalue.push(ary[i].split('=')[1]);
+        }
+        for (i = 0; i < idvalue.length; i++) {
+            if (i == 0) {
+                MVType = idvalue[i];
+                for (j = 0; j < typeNames.length; j++) {
+                    if (typeClass[j] == MVType) {
+                        MVTypeName = typeNames[j];
+                        break;
+                    }
+                }
+            }
+            if (i == 1) {
+                CurMovieID = idvalue[i];
+            }
+            if (i == 2) {
+                curFileUrl = idvalue[i];
+            }
+        }
+        paraNum = idvalue.length; //參數個數
+    }
+    var discusstm="";
+    function getDiscuss() {
+        if (CurMovieID == '')
+            return;
+        $("#discuss div").remove();
+        $.get("scheduleRelated.ashx?qid=6&MovieID=" + CurMovieID, function (data, status) {
+            if (data != 'null') {
+                var obj = JSON.parse(data);
+                var markup = '';
+
+                for (i = obj.length - 1; i >= 0; i--) {
+                    if (obj[i].account == Account)
+                        markup += '<div class="Chatcontainer"><span>我:</span>' +
+                    '<p>' + obj[i].comment + '</p>' +
+                        '<span class="Chattime-right">' + obj[i].wtime + '</span></div>';
+                    else
+                        markup += '<div class="Chatcontainer Chatdarker"><span class="right">' + obj[i].Name + ':</span>' +
+                        '<p>' + obj[i].comment + '</p>' +
+                        '<span class="Chattime-left">' + obj[i].wtime + '</span></div>';
+                    if (i == 0)
+                        discusstm = obj[i].pdate;
+                }
+                $("#discuss").append(markup);
+            }
+        });
+        trytimes = 0;
+        setTimeout(scrollbm, 500);
+        //var o = document.getElementById("discuss");
+        //o.scrollTop = o.scrollHeight;
+        //$("#discuss").animate({ scrollTop: $('#discuss').prop("scrollHeight") }, 1000);
+        //$('#discuss').animate({
+        //    scrollTop: $('#discuss').scrollHeight
+        //}, "slow");
+    };
+
+    function checkFinish() {
+        if (Videlem.duration - Videlem.currentTime < 5)
+            finish = 1;
+        else
+            finish = 0;
+
+        return finish;
+    }
+
+    function LeavingPage() {//差別沒登出
+        $.post("dprocess.ashx", { qid: ' 6', MovieID: CurMovieID, Vtype: MVType, PauseAt: Videlem.currentTime.toString(), complete: checkFinish() }, function (data) {
+
+        })
+    }
+    function renderTable() {//取得類別相關影片
+        $("#myTable tr").remove();
+        $.get("scheduleRelated.ashx?qid=5&type=" + MVType, function (data, status) {
+            if (data != 'null') {
+                var obj = JSON.parse(data);
+                var markup = "<tr><th class='C1'>影片編號</th> <th class='C2'>片名</th><th class='C3'>簡介</th> <th class='C4'>評價</th></tr>";
+                for (i = 0; i < obj.length; i++) {
+                    markup += "<tr><td class='C1'><span  onclick=\"replaceSource('" + urlS + obj[i].URL + obj[i].filename + "','" + obj[i].MovieID  + "','" + obj[i].Title+ "');displayIntro('" + obj[i].Intro + "');\">" + obj[i].MovieID + "</span></td><td class='C2'>" +
+                                                                      obj[i].Title + "</td><td class='C3'>" +
+                                                                     "<p style='overflow:scroll'>" + obj[i].Intro + "</p></td><td class='C4'>" +
+                                                                      obj[i].Evaluate + "</td></tr>";
+
+                }
+                $("#myTable").append(markup);
+            }
+        });
+    }
+
+    function displayIntro(content) {
+        $('#intro').text(content);
+    }
+    function replaceSource(vidurl, mvid,title) {
+        if (mvid == CurMovieID || CurMovieID == undefined) {
+            return;
+        }
+        else {
+            MVTitle = title;
+            $('#vtype').text(MVTypeName+':'+MVTitle);
+            $("#loading").show();
+            $("#vid").hide();
+            if (Videlem.currentTime > 50)//有看超過50sec
+                LeavingPage();
+            $('#vid').get(0).pause();
+            //timeHubProxy = $.connection.PascalCasedMyDateTimeHub;
+            //chatHubProxy = $.connection.myChatHub;
+
+            if (CurMovieID != "")
+                if ($.connection.hub && $.connection.hub.state === $.signalR.connectionState.disconnected) {
+                    $.connection.hub.start()
+                    .done(function () {
+                        $.connection.myChatHub.server.leaveGroup($.connection.hub.id, CurMovieID);
+                    })
+
+                } else {
+                    $.connection.myChatHub.server.leaveGroup($.connection.hub.id, CurMovieID);
+                }
+
+            CurMovieID = mvid;
+            if ($.connection.hub && $.connection.hub.state === $.signalR.connectionState.disconnected) {
+                $.connection.hub.start()
+                .done(function () {
+                    $.connection.myChatHub.server.joinGroup($.connection.hub.id, CurMovieID);
+                })
+
+            } {
+                $.connection.myChatHub.server.joinGroup($.connection.hub.id, CurMovieID);
+
+            }
+
+            curFileUrl = vidurl;
+            played = false;
+            PlayClickTime = 0;
+            ratingValue = 0;
+            $('#vidsrc').attr('src', curFileUrl);
+            Videlem.load();
+            //$('#vid').get(0).load();
+            $.post("dprocess.ashx", { qid: 'B', MovieID: CurMovieID, Vtype: MVType }, function (data) {
+                if (data != 'null') {//
+                    Videlem.currentTime = parseFloat(data) - 5.0;
+                    $("#total").text(secTohhmmss(Videlem.duration));
+                    $("#current").text(secTohhmmss(Videlem.currentTime));
+                } else {
+                    Videlem.currentTime = 0;
+                    $("#total").hide();
+                    $("#current").text(secTohhmmss(Videlem.currentTime));
+
+                }
+            });
+            getDiscuss();
+            responseMessage('');
+            var stars = $("#stars").children('li.star');
+
+            for (i = 0; i < stars.length; i++) {
+                $(stars[i]).removeClass('selected');
+            }
+
+        }
+
+    }
+    $("#logout").click(function () {
+        $.post("dprocess.ashx", { qid: '5', MovieID: CurMovieID, Vtype: MVType, PauseAt: Videlem.currentTime.toString(), complete: checkFinish() }, function (data) {
+            if (data != 'null') {//登出成功
+                //
+                window.location.href = "default.html";
+            }
+        });
+    });
+    //$(function () {
+    //    $("tr:even").css("background-color", "yellow");
+    //})
+    var kindsel = '2';
+    $(document).ready(function () {
+        // $("#myTable tbody tr:odd").addClass("odd"),
+        //$("#myTable tbody tr:even").addClass("even")
+
+        $.post("dprocess.ashx", { qid: '3' }, function (data) {
+            if (data != 'null') {//登入成功
+                UserName = data.split(",")[0];
+                Account = data.split(",")[1];
+                if (Account == 'A0000') { //Administrator
+                    $("#Admin").css('display', 'block');
+                    $("#adminhref").attr("href", url + "Admin.aspx");
+                }
+                $("#welcome").text("歡迎:" + UserName)
+                $("#welcome").attr("href", "javascript:void(0)");
+                $("#logout").text("Log out")
+                $("#logout").attr("href", "javascript:void(0)");
+                auth = 'Yes';
+                $("#home").attr("href", "default.html");
+                //$("#matcher").attr("href", url + "match.html");
+                //$("#communicate").attr("href", url + "communicate.html");
+                $("#personal").attr("href", url + "personel.html");
+                $("#upload").attr("href", url + "fileupload.aspx");
+                //$("#logout").click(function () {
+                //    $.post("dprocess.ashx", { qid: '5', MovieID: CurMovieID, Vtype: MVType, PauseAt: Videlem.currentTime.toString(), complete: checkFinish() }, function (data) {
+                //        if (data != 'null') {//登出成功
+                //            //
+                //            window.location.href = "default.html";
+                //        }
+                //    });
+                //});
+            }
+            else {
+                var data = window.location.href.split('?')[1];
+                var location = window.location.href.split('?')[0];
+                window.location.href = url + "LoginReg.html?url=" + location + "&role=login&data=" + data;
+            }
+        });
+        $(".kindsel").click(function () {
+            kindsel = $(this).attr("value");
+            //<input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="輸入片名.." title="Type in a name">
+            var contentstr='';
+                switch(kindsel){
+                    case "1":
+                        contentstr = "輸入編號..";
+                        break;
+                    case "2":
+                        contentstr = "輸入片名..";
+                        break;
+                    case "3":
+                        contentstr = "輸入關鍵字..";
+                        break;
+                }
+                $("#myInput").attr('placeholder',contentstr);
+
+        });
+        if (curFileUrl != '') {
+            $('#vtype').text(MVTypeName);
+            $('#vid').get(0).pause();
+            $('#vidsrc').attr('src', curFileUrl);
+            $('#vid').get(0).load();
+            $.post("dprocess.ashx", { qid: 'B', MovieID: CurMovieID, Vtype: MVType }, function (data) {
+                if (data != 'null') {//
+                    Videlem.currentTime = parseFloat(data) - 5.0;
+                    $("#total").text(secTohhmmss(Videlem.duration));
+                    $("#current").text(secTohhmmss(Videlem.currentTime));
+                } else {
+                    Videlem.currentTime = 0;
+                    $("#total").hide();
+                    $("#current").text(secTohhmmss(Videlem.currentTime));
+
+                }
+            });
+        }
+        //<th class="C1">影片編號</th>
+        //<th class="C2">片名</th>
+        // <th class="C3">簡介</th>
+        // <th class="C4">評價</th>
+        renderTable();
+        getDiscuss();
+        if (paraNum == 1) {
+            openNav1();
+            $("#open").hide();
+        }
+
+
+    });
+
+
+
+
+    //document.onreadystatechange = function () {
+    //    if (document.readyState == "complete") {
+    //        $("#maximize").hide();
+    //    }
+    //}
+
+
+
+
+
+
+</script>

@@ -1,0 +1,32 @@
+2018-11-06 08:39:36,308 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 08:40:34,142 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 6 Where  VtypeName='cartoon'
+2018-11-06 08:40:34,144 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000005
+2018-11-06 08:54:01,880 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 08:54:44,804 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 7 Where  VtypeName='cartoon'
+2018-11-06 08:54:44,806 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000006
+2018-11-06 09:43:50,659 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 09:44:09,517 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 8 Where  VtypeName='cartoon'
+2018-11-06 09:44:09,519 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000007
+2018-11-06 09:48:48,760 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 9 Where  VtypeName='cartoon'
+2018-11-06 09:48:48,761 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000008
+2018-11-06 10:01:11,161 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 10:01:32,296 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 10 Where  VtypeName='cartoon'
+2018-11-06 10:01:32,298 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000009
+2018-11-06 10:03:57,577 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 11 Where  VtypeName='cartoon'
+2018-11-06 10:03:57,578 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000010
+2018-11-06 10:06:27,095 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 12 Where  VtypeName='cartoon'
+2018-11-06 10:06:27,096 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000011
+2018-11-06 10:10:40,864 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 10:10:57,100 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 13 Where  VtypeName='cartoon'
+2018-11-06 10:10:57,103 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000012
+2018-11-06 10:15:41,068 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 10:16:00,717 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 14 Where  VtypeName='cartoon'
+2018-11-06 10:16:00,719 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000013
+2018-11-06 10:33:17,469 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 10:33:34,272 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 15 Where  VtypeName='cartoon'
+2018-11-06 10:33:34,274 INFO 329 ASP.uploadprogress_aspx - Create MovieID:B-A0003-000014
+2018-11-06 10:38:50,606 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-06 10:39:48,746 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 12 Where  VtypeName='others'
+2018-11-06 10:39:48,749 INFO 329 ASP.uploadprogress_aspx - Create MovieID:J-A0003-000011
+2018-11-06 10:39:49,073 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 13 Where  VtypeName='others'
+2018-11-06 10:39:49,074 INFO 329 ASP.uploadprogress_aspx - Create MovieID:J-A0003-000012

@@ -1,0 +1,8 @@
+2018-11-10 11:13:23,700 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-10 11:14:31,148 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-10 21:21:08,770 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-10 21:21:47,294 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='Sci-fi'
+2018-11-10 21:21:47,295 INFO 332 ASP.uploadprogress_aspx - Create MovieID:G-A0003-000001
+2018-11-10 22:46:54,782 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-10 22:47:17,891 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 3 Where  VtypeName='others'
+2018-11-10 22:47:17,893 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0003-000002

@@ -1,0 +1,92 @@
+2018-11-07 09:32:44,280 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 09:32:55,502 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 09:32:59,995 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 09:33:11,733 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 09:33:13,739 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 09:37:40,706 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 09:55:03,319 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 09:55:32,060 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 09:55:32,064 ERROR 256 WebProject.dprocess -    於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 221
+2018-11-07 10:30:50,069 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 10:31:03,695 ERROR 388 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:04,237 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 10:31:06,307 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 10:31:08,796 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 10:31:38,397 ERROR 332 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:47,393 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:47,393 ERROR 256 WebProject.dprocess -    於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 218
+2018-11-07 10:31:48,382 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:48,384 ERROR 256 WebProject.dprocess -    於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 218
+2018-11-07 10:31:48,882 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:48,883 ERROR 256 WebProject.dprocess -    於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 218
+2018-11-07 10:31:49,382 ERROR 255 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:49,383 ERROR 256 WebProject.dprocess -    於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 218
+2018-11-07 10:31:49,890 ERROR 332 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:52,608 ERROR 388 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 10:31:53,136 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 10:31:53,891 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 10:31:55,908 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 10:33:03,810 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 10:59:42,497 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='others'
+2018-11-07 10:59:42,499 INFO 329 ASP.uploadprogress_aspx - Create MovieID:J-A0003-000001
+2018-11-07 11:04:08,121 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='love'
+2018-11-07 11:04:08,122 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000001
+2018-11-07 11:07:27,357 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 3 Where  VtypeName='love'
+2018-11-07 11:07:27,358 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000002
+2018-11-07 11:11:13,218 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 11:11:30,648 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 4 Where  VtypeName='love'
+2018-11-07 11:11:30,650 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000003
+2018-11-07 11:18:45,139 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 11:19:07,330 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 5 Where  VtypeName='love'
+2018-11-07 11:19:07,332 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000004
+2018-11-07 11:21:08,115 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 6 Where  VtypeName='love'
+2018-11-07 11:21:08,115 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000005
+2018-11-07 11:22:38,142 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 7 Where  VtypeName='love'
+2018-11-07 11:22:38,142 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000006
+2018-11-07 12:21:20,419 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 12:21:44,624 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 8 Where  VtypeName='love'
+2018-11-07 12:21:44,627 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000007
+2018-11-07 12:47:13,080 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 12:48:38,618 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 9 Where  VtypeName='love'
+2018-11-07 12:48:38,621 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000008
+2018-11-07 13:18:04,841 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 13:18:22,373 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 10 Where  VtypeName='love'
+2018-11-07 13:18:22,375 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000009
+2018-11-07 13:25:13,139 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 13:27:07,158 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 11 Where  VtypeName='love'
+2018-11-07 13:27:07,161 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000010
+2018-11-07 13:44:07,406 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 13:44:31,666 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 12 Where  VtypeName='love'
+2018-11-07 13:44:31,669 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000011
+2018-11-07 14:21:37,532 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 14:25:34,680 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 14:32:16,895 ERROR 259 ASP.uploadprogress_aspx - 並未將物件參考設定為物件的執行個體。
+2018-11-07 14:32:17,661 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 13 Where  VtypeName='love'
+2018-11-07 14:32:17,662 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000012
+2018-11-07 14:32:18,706 INFO 326 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 14 Where  VtypeName='love'
+2018-11-07 14:32:18,706 INFO 329 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000013
+2018-11-07 14:39:19,631 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 14:39:34,047 ERROR 259 ASP.uploadprogress_aspx - 並未將物件參考設定為物件的執行個體。
+2018-11-07 14:39:34,049 ERROR 260 ASP.uploadprogress_aspx -    於 ASP.uploadprogress_aspx.Page_Load(Object sender, EventArgs e) 於 d:\WebProject\WebProject\UploadProgress.aspx: 行 211
+2018-11-07 14:39:49,462 ERROR 259 ASP.uploadprogress_aspx - 並未將物件參考設定為物件的執行個體。
+2018-11-07 14:39:49,463 ERROR 260 ASP.uploadprogress_aspx -    於 ASP.uploadprogress_aspx.Page_Load(Object sender, EventArgs e) 於 d:\WebProject\WebProject\UploadProgress.aspx: 行 211
+2018-11-07 14:40:32,529 ERROR 259 ASP.uploadprogress_aspx - 並未將物件參考設定為物件的執行個體。
+2018-11-07 14:40:32,530 ERROR 260 ASP.uploadprogress_aspx -    於 ASP.uploadprogress_aspx.Page_Load(Object sender, EventArgs e) 於 d:\WebProject\WebProject\UploadProgress.aspx: 行 211
+2018-11-07 14:45:00,625 ERROR 259 ASP.uploadprogress_aspx - 並未將物件參考設定為物件的執行個體。
+2018-11-07 14:45:00,638 ERROR 260 ASP.uploadprogress_aspx -    於 ASP.uploadprogress_aspx.Page_Load(Object sender, EventArgs e) 於 d:\WebProject\WebProject\UploadProgress.aspx: 行 211
+2018-11-07 15:00:44,606 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 15:09:21,864 ERROR 260 ASP.uploadprogress_aspx - 並未將物件參考設定為物件的執行個體。
+2018-11-07 15:09:21,865 ERROR 261 ASP.uploadprogress_aspx -    於 ASP.uploadprogress_aspx.Page_Load(Object sender, EventArgs e) 於 d:\WebProject\WebProject\UploadProgress.aspx: 行 212
+2018-11-07 15:10:28,281 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 15:11:02,083 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 15 Where  VtypeName='love'
+2018-11-07 15:11:02,085 INFO 332 ASP.uploadprogress_aspx - Create MovieID:F-A0003-000014
+2018-11-07 15:13:21,340 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 15:16:24,668 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 15:49:57,968 ERROR 388 WebProject.dprocess - 並未將物件參考設定為物件的執行個體。
+2018-11-07 15:49:58,003 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 15:49:59,366 INFO 136 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-07 15:50:01,148 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 15:50:11,067 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 16:02:29,083 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 16:06:37,530 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。
+2018-11-07 16:07:25,609 INFO 360 WebProject.scheduleRelated - Fill: SelectCommand.Connection 屬性尚未初始化。

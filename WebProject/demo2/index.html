@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo 2 | Custom HTML5 Video Controls with jQuery</title>
+<link rel="stylesheet" href="../vendorstyle.css" />
+<link rel="stylesheet" href="style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../vendorscript.js"></script>
+<script src="video.js"></script>
+<!--[if lt IE 9]>
+<script>
+$(document).ready(function() {
+	$('.control').hide();
+	$('.loading').fadeOut(500);
+	$('.caption').fadeOut(500);
+});
+</script>
+<![endif]-->
+<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson/favicon.ico" />
+</head>
+
+<body>
+<!-- Header -->
+<header>
+	<h1>Custom HTML5 Video Controls with jQuery</h1>
+	<div id="backlinks">
+		<a href="http://www.inwebson.com/html5/custom-html5-video-controls-with-jquery-and-css/">BACK TO ARTICLE &raquo;</a>
+		<a href="http://www.inwebson.com">Visit inWebson.com &raquo;</a>
+	</div>
+	<div class="clearfix"></div>
+</header>
+
+<!-- Content -->
+<section id="wrapper">
+
+	<!-- Title -->
+	<h2>Demo 2</h2>
+	<h3>Custom HTML5 Video Controls</h3>
+
+<div class="videoContainer">
+	
+	<video id="myVideo" controls preload="auto" poster="poster.jpg" width="600" height="350" >
+	  <source src="http://demo.inwebson.com/html5-video/iceage4.mp4" type="video/mp4" />
+	  <source src="http://demo.inwebson.com/html5-video/iceage4.webm" type="video/webM" />
+	  <source src="http://demo.inwebson.com/html5-video/iceage4.ogv" type="video/ogg" />
+	  <p>Your browser does not support the video tag.</p>
+	</video>
+	<div class="caption">This is HTML5 video with custom controls</div>
+	<div class="control">
+		<div class="progress">
+			<span class="bufferBar"></span>
+			<span class="timeBar"></span>
+		</div>
+		
+		<div class="btmControl">
+			
+			<div class="mainControl">
+				<a class="btnStop lvl3 btnmain" href="#" tabindex="0" title="Stop play"></a>
+				<a class="btnBck lvl2 btnmain" href="#" tabindex="0" title="Rewind"></a>
+				<a class="btnPlay lvl1 btnmain" href="#" tabindex="0" title="Play/Pause video"></a>
+				<a class="btnFwd lvl2 btnmain" href="#" tabindex="0" title="Fast forward"></a>
+				<a class="btnEnd lvl3 btnmain" href="#" tabindex="0" title="End video"></a>
+			</div>	
+
+			<div class="volume">
+				<div class="sound" title="Mute/Unmute sound"></div>
+				<span class="volumeCover" title="Set volume"></span>
+				<span class="volumeBar"></span>
+			</div>
+		</div>
+		
+	</div>
+	<div class="loading"></div>
+</div>
+
+	<!-- Navigation -->
+	<nav id="navigation">
+		<ul>
+			<li><a href="../demo1/" title="Demo 1">DEMO 1</a></li>
+			<li class="currentbtn"><a href="#" title="Demo 2">DEMO 2</a></li>
+		</ul>
+		<div class="clearfix"></div>	
+	</nav>
+</section>
+
+<!-- Footer -->
+<footer>
+	<span>&copy; 2011 <a href="http://www.inwebson.com">inWebson.com</a>. Design by <a href="http://www.inwebson.com/contactus">Kenny Ooi</a>. Powered by <a href="http://www.inwebson.com/html5/">HTML5</a> and <a href="http://www.inwebson.com/jquery/">jQuery</a>.</span>
+</footer>
+</body>
+</html>

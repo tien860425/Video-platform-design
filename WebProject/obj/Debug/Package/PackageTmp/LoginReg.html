@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>登入</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="noindex, nofollow" name="robots">
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <link href="css/loginReg.css" rel="stylesheet">
+    <script src="js/LoginReg.js"></script>
+</head>
+<body background="global.jpg" style="background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;">
+    >
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">影視人</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/default.html">Home</a></li>
+                    <!--<li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>-->
+                </ul>
+
+                <!--<ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>-->
+            </div>
+        </nav>
+    </div>
+    <!--<img id="logo" src="images/logo.png">-->
+    <div id="main">
+        <!-- Create Div First For Login Form -->
+        <div id="first">
+            <form action="" method="post">
+                <h3>請登入...</h3>
+                <!--<img id="divider" src="images/divider.png">-->
+                <input id="loginemail" placeholder="電子信箱" type="text">
+                <input id="loginpassword" placeholder="密碼" type="password">
+                <input id="login" type="button" value="登入">
+                <p id="one"><a href="#">忘記密碼 ?</a></p>
+                <p id="two">沒有帳號? <a class="signup" href="#" id="signup">這裡註冊</a></p>
+            </form>
+        </div>
+        <!-- Create Div Second For Signup Form-->
+        <div id="second">
+            <form action="dprocess.ashx" id="form" method="post" name="form">
+                <h3>建立帳戶</h3>
+                <!--<img id="divider" src="images/divider.png">-->
+                <input id="name" placeholder="全名" type="text">
+                <input id="registeremail" placeholder="電子信箱" type="text">
+                <input id="registerpassword" placeholder="密碼" type="password">
+                <input id="registercpassword" placeholder="確認密碼" type="password">
+                <input id="contact" placeholder="連絡電話" type="text">
+                <input id="register" type="button" value="產生帳號">
+                <p id="two">已有帳戶? <a class="signin" href="#" id="signin">登入</a></p>
+            </form>
+        </div>
+    </div>
+    <div class="tclearfix" style="height:80px;background-color:black;position:absolute; bottom:0px;right:0px;width: 100%;">
+        <p style="color:white;top:20px;left:10px;">Copyright &copy; 2018 S.H.A.V.P影音平台</p>
+    </div>
+</body>
+</html>
+<script >
+    var role = window.location.href.split('?')[1].split('&')[1].split('=')[1];
+    if (role == 'login') {
+        $("#first").show();
+        $("#second").hide();
+    } 
+    else {
+        $("#first").hide();
+        $("#second").show();
+    }
+
+</script>

@@ -1,0 +1,31 @@
+Comment Table是Account 對MovieID這影片評價，start:1~5  ; comment意見；pdate:日期  pk:MovieID＋Account＋pdate
+
+Carousel Table分為Hot,最多人瀏覽前10，New,最新上傳前10，評價最高前10. 此資料表是在cyclework程式每天處理
+圖片及短片在上傳時在VideoHandle（在相關檔案說明）依上傳影片製作。
+
+
+CommercialAd  Table存放首頁廣告，可為影片或照片ShowDateStart：播放開始日期  ShowDateStop：播放結束日期  Priority：順序
+filename,Description,URL,MediaType：V  or   P.  會於cyclework 程式刪除過期。在管理員化面增列。
+
+countReader  Table為製作會員帳號及媒合案件編號
+
+donate Table可能刪除
+
+
+Footprint Table記錄會員觀看歷史，關連至Comment
+
+
+Match Table,CaseNo：媒合案件編號，RequstAcountNo：要求方帳號。AcceptAccount：承接方帳號。會顯示在我的資料。
+
+
+MemberAccount Table會員資料表。會顯示在我的資料。
+
+
+MovieBase影片庫
+
+
+VideoType製作影片id
+
+
+
+

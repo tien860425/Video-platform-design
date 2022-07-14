@@ -1,0 +1,89 @@
+2018-11-11 02:26:56,194 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 02:27:46,611 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 26 Where  VtypeName='Suspense'
+2018-11-11 02:27:46,613 INFO 332 ASP.uploadprogress_aspx - Create MovieID:A-A0004-000025
+2018-11-11 02:29:57,754 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 4 Where  VtypeName='others'
+2018-11-11 02:29:57,755 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000003
+2018-11-11 02:36:47,450 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 02:37:23,291 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 5 Where  VtypeName='others'
+2018-11-11 02:37:23,293 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000004
+2018-11-11 02:39:58,380 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 02:40:31,869 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 6 Where  VtypeName='others'
+2018-11-11 02:40:31,871 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000005
+2018-11-11 02:42:33,543 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 7 Where  VtypeName='others'
+2018-11-11 02:42:33,544 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000006
+2018-11-11 02:46:23,442 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 02:47:05,111 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 8 Where  VtypeName='others'
+2018-11-11 02:47:05,113 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000007
+2018-11-11 02:47:27,705 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 27 Where  VtypeName='Suspense'
+2018-11-11 02:47:27,706 INFO 332 ASP.uploadprogress_aspx - Create MovieID:A-A0004-000026
+2018-11-11 02:57:33,473 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 02:58:25,819 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 9 Where  VtypeName='others'
+2018-11-11 02:58:25,821 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000008
+2018-11-11 02:59:48,010 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 10 Where  VtypeName='others'
+2018-11-11 02:59:48,010 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000009
+2018-11-11 03:08:43,491 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 03:09:05,317 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 11 Where  VtypeName='others'
+2018-11-11 03:09:05,319 INFO 332 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000010
+2018-11-11 09:18:28,298 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 09:18:41,040 INFO 594 WebProject.dprocess - 刪除影片資料:movieid=A-A0004-000026,片名=ddsgsg
+2018-11-11 09:21:06,327 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 09:22:36,230 ERROR 599 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 09:22:36,230 ERROR 600 WebProject.dprocess -    於 System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   於 System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 566
+2018-11-11 09:24:46,031 ERROR 599 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 09:24:46,031 ERROR 600 WebProject.dprocess -    於 System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   於 System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 566
+2018-11-11 09:40:05,339 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 09:41:32,088 ERROR 599 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 09:41:32,104 ERROR 600 WebProject.dprocess -    於 System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   於 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   於 System.IO.Path.GetFullPathInternal(String path)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 566
+2018-11-11 10:22:55,906 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 10:23:40,115 INFO 329 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 28 Where  VtypeName='Suspense'
+2018-11-11 10:23:40,118 INFO 332 ASP.uploadprogress_aspx - Create MovieID:A-A0004-000027
+2018-11-11 10:27:04,101 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 10:56:34,679 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 10:58:02,691 INFO 337 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 29 Where  VtypeName='Suspense'
+2018-11-11 10:58:02,693 INFO 340 ASP.uploadprogress_aspx - Create MovieID:A-A0004-000028
+2018-11-11 11:22:33,442 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 11:23:15,299 ERROR 599 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 11:23:15,300 ERROR 600 WebProject.dprocess -    於 System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   於 System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 566
+2018-11-11 11:24:35,050 ERROR 599 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 11:24:35,050 ERROR 600 WebProject.dprocess -    於 System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   於 System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 566
+2018-11-11 11:25:05,254 INFO 337 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 12 Where  VtypeName='others'
+2018-11-11 11:25:05,256 INFO 340 ASP.uploadprogress_aspx - Create MovieID:J-A0004-000011
+2018-11-11 11:48:46,845 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 11:49:10,237 INFO 337 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 16 Where  VtypeName='love'
+2018-11-11 11:49:10,240 INFO 340 ASP.uploadprogress_aspx - Create MovieID:F-A0004-000015
+2018-11-11 11:53:23,208 INFO 136 WebProject.dprocess - 登入:Email=ch@ba.com; Account:A0004
+2018-11-11 11:53:35,420 ERROR 597 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 11:53:35,420 ERROR 598 WebProject.dprocess -    於 System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   於 System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 568
+2018-11-11 11:53:35,430 INFO 603 WebProject.dprocess - 刪除影片資料:movieid=A-A0004-000028,片名=GGGGG
+2018-11-11 11:53:46,504 ERROR 597 WebProject.dprocess - 路徑中有不合法的字元。
+2018-11-11 11:53:46,504 ERROR 598 WebProject.dprocess -    於 System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   於 System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   於 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   於 System.IO.File.Delete(String path)
+   於 WebProject.dprocess.ProcessRequest(HttpContext context) 於 D:\WebProject\WebProject\dprocess.ashx.cs: 行 568
+2018-11-11 11:53:46,504 INFO 603 WebProject.dprocess - 刪除影片資料:movieid=F-A0004-000015,片名=CCC

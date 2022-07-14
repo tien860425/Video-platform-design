@@ -1,0 +1,627 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>資管4A影視平台</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link href="css/thinscroll.css" rel="stylesheet" type="text/css">
+    <script src="Scripts/jquery-3.3.1.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.3.0.min.js"></script>
+   <script type="text/javascript" src="signalr/hubs"></script>
+    <script type="text/javascript" src="js/dateManupulate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#catabtn").click(function () {
+                $("#A").fadeToggle();
+                $("#B").fadeToggle();
+                $("#C").fadeToggle();
+                $("#D").fadeToggle();
+                $("#E").fadeToggle();
+                $("#F").fadeToggle();
+                $("#G").fadeToggle();
+                $("#H").fadeToggle();
+                $("#I").fadeToggle();
+                $("#J").fadeToggle();
+            });
+        });
+    </script>
+    <style>
+        .carousel-inner > .item > video,
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 42%;
+            max-height: 250px;
+            margin: auto;
+            align-content: center;
+        }
+
+        .bulletin {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #b1 {
+            font-size: 3em;
+            color: red;
+            position: absolute;
+            width: 150%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: left;
+            /* Starting position */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            -moz-animation: bulletin 20s linear infinite;
+            -webkit-animation: bulletin 20s linear infinite;
+            animation: bulletin 20s linear infinite;
+        }
+
+        #b2 {
+            font-size: 2em;
+            color: limegreen;
+            position: absolute;
+            width: 150%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: left;
+            /* Starting position */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            -moz-animation: bulletin 20s linear infinite;
+            -webkit-animation: bulletin 20s linear infinite;
+            animation: bulletin 20s linear infinite;
+        }
+
+        #b3 {
+            font-size: 2em;
+            color: darkblue;
+            position: absolute;
+            width: 150%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: left;
+            /* Starting position */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            -moz-animation: bulletin 25s linear infinite;
+            -webkit-animation: bulletin 25s linear infinite;
+            animation: bulletin 25s linear infinite;
+        }
+        /* Move it (define the animation) */
+        @-moz-keyframes bulletin {
+            0% {
+                -moz-transform: translateX(100%);
+            }
+
+            100% {
+                -moz-transform: translateX(-150%);
+            }
+        }
+
+        @-webkit-keyframes bulletin {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+
+            100% {
+                -webkit-transform: translateX(-150%);
+            }
+        }
+
+        @keyframes bulletin {
+            0% {
+                -moz-transform: translateX(100%); /* Firefox bug fix */
+                -webkit-transform: translateX(100%); /* Firefox bug fix */
+                transform: translateX(100%);
+            }
+
+            100% {
+                -moz-transform: translateX(-150%); /* Firefox bug fix */
+                -webkit-transform: translateX(-150%); /* Firefox bug fix */
+                transform: translateX(-150%);
+            }
+        }
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            margin: auto;
+            width: 120px;
+            /*width: 120px;*/
+            height: 120px;
+            -webkit-animation: spin 5s linear infinite; /* Safari */
+            animation: spin 5s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">資管4A影視平台</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li id="Admin" style=" display:none"><a id="adminhref" href="#">管理員</a></li>
+                    <li><a id="personal" href="#">我的資料</a></li>
+                    <!--<li><a id="matcher" href="#">需求媒合</a></li>
+                    <li><a id="communicate" href="#">技術交流</a></li>-->
+                    <li><a id="upload" href="#">影片上傳</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="welcome" href="#"><span id="welcomespan" class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a id="logout" href="#"><span id="logoutspan" class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                    <!--<li><a id="welcome" href="#">Sign Up</a></li>
+                    <li><a id="logout" href="#">Login</a></li>-->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="catagory">
+        <button type="button" class="btn btn-info" style="width:100%" id="catabtn">
+            <span class="glyphicon glyphicon-search"></span> 類別
+        </button>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="A"><span class="fa fa-spinner fa-spin"></span>懸疑類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="B"><span class="fa fa-circle-o-notch fa-spin"></span>動漫類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="C"><span class="fa fa-refresh fa-spin"></span>微電影類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="D"><span class="fa fa fa-heartbeat fa-spin"></span>動作類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="E"><span class="fa fa-spinner fa-spin"></span>喜劇類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="F"><span class="fa fa-circle-o-notch fa-spin"></span>愛情類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="G"><span class="fa fa-refresh fa-spin"></span>科幻類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="H"><span class="fa fa fa-heartbeat fa-spin"></span>恐怖類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="I"><span class="fa fa-refresh fa-spin"></span>教學類</button></div>
+        <div><button type="button" class="btn btn-success BB" style="display:none;width:100%;" id="J"><span class="fa fa fa-heartbeat fa-spin"></span>其他類</button></div>
+        <br />
+        <br />
+
+        <div id="commercial" style="width:100%">
+
+
+        </div>
+    </div>
+
+    <div class="activead">
+        <div class="container" style="width: 100%">
+            <br>
+            <div id="myCarousel" style="width: 100%; background-color:lightgray; border-color: darkblue; border-style: groove" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol id="HotOL" class="carousel-indicators">
+                    <!--<li data-target="#myCarousel_2" data-slide-to="0" class="active"></li>-->
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div id="Wrapper1" class="carousel-inner">
+
+                    <!--<div class="item active">
+                        <a id="3na" href="#"><img id="3nimg" src="./img/post/1.gif" width="300" height="200" alt="Car" style=" float:left"></a>
+                        <video id="112img" controls src="./img/post/v2.mp4" style=" float:right"></video>
+                        <div class="carousel-caption">
+                            <h3>熱播1</h3>
+                            <p>活動式海報1.</p>
+                        </div>
+                    </div>-->
+
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+            <br />
+            <div id="myCarousel_1" style="width: 100%; background-color:lightgreen; border-color: darkblue; border-style: groove" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol id="NewOL" class="carousel-indicators">
+                    <!--<li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>-->
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div id="Wrapper2" class="carousel-inner" role="listbox">
+
+                    <!--<div class="item active">
+                        <a id="3na" href="#"><img id="3nimg" src="./img/post/1.gif" width="300" height="200" alt="Car" style=" float:left"></a>
+                        <video id="112img" controls src="./img/post/v2.mp4" style=" float:right"></video>
+                        <div class="carousel-caption">
+                            <h3>熱播1</h3>
+                            <p>活動式海報1.</p>
+                        </div>
+                    </div>-->
+
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel_1" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel_1" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+            <br />
+            <div id="myCarousel_2" style="width: 100%; background-color:lightgray; border-color: darkblue; border-style: groove" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol id="gradeOL" class="carousel-indicators">
+                    <!--<li data-target="#myCarousel_2" data-slide-to="0" class="active"></li>-->
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div id="Wrapper3" class="carousel-inner" role="listbox">
+
+                    <!--<div class="item active">
+                        <a id="3na" href="#"><img id="3nimg" src="./img/post/1.gif" width="300" height="200" alt="Car" style=" float:left"></a>
+                        <video id="112img" controls src="./img/post/v2.mp4" style=" float:right"></video>
+                        <div class="carousel-caption">
+                            <h3>熱播1</h3>
+                            <p>活動式海報1.</p>
+                        </div>
+                    </div>-->
+
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel_2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel_2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <!--<div>
+            <button type="button" class="btn btn-info" style="width:100px">
+                <span class="glyphicon glyphicon-search"></span> 搜尋
+            </button>
+        </div>-->
+
+        <div class="bulletin" style="height: 55px; background-color: aqua; ">
+            <p id="b1"></p>
+        </div>
+        <div class="bulletin" style="height: 55px; background-color: aqua; ">
+            <p id="b2"></p>
+        </div>
+        <div class="bulletin" style="height: 55px; background-color: aqua; ">
+            <p id="b3"></p>
+        </div>
+        <div id="chat" style="width:100%;height:800px;overflow:scroll">
+            <!--<ul id="chatli"></ul>-->
+        </div>
+
+    </div>
+    <br/>
+    <div id="maximize" style="position :absolute;width:100%;height:100%;background-color:lightcyan;top:0px;left:0px;z-index:200">
+        <div class="loader" ></div>
+    </div>
+
+    <div class="tclearfix" style="height:60px;background-color:black;left:0px;width: 100%;text-align:center;padding-top:20px;clear:both">
+        <p style="color:white;top:20px;left:10px;">Copyright &copy; 2018 S.H.V.P影音平台</p>
+    </div>
+
+</body>
+</html>
+<script>
+    var UserName, Account;
+    var auth = 'No';
+    var HotArray = [];
+    var NewArray = [];
+    var HiGradeArray = [];
+
+    var url;
+    var urlS;
+    var gurl = window.location.protocol + "//" + window.location.host;
+    if (window.location.host.indexOf("localhost") >= 0) {
+        url = gurl + "/";
+        urlS = window.location.protocol + "//localhost/";
+    }
+    else {
+        url = gurl + "/";
+        urlS = url;
+    }
+    function PlayV(vid) {
+        vid.pause();
+        vid.play();
+    }
+    function PauseV(vid) {
+        vid.pause();
+    }
+    function pollServer() {
+        $.get(url + "scheduleRelated.ashx?qid=4", function (data, status) {
+            var obj = data.split(';');
+            $("#b1").text(obj[0]);
+            $("#b2").text(obj[1]);
+            $("#b3").text(obj[2]);
+        });
+        setTimeout("pollServer()", 10000);
+    }
+    pollServer();
+    var curTime = "";
+    var trytimes = 0;
+    function addMsg(title, msg) {
+        if(title!="")
+            $("#chat").append("<p>" + title + ':' + "</p>");
+            $.connection.PascalCasedMyDateTimeHub.server.PascalCasedGetServerDateTime().done(function (serverTime) {
+                var dd = new Date(serverTime);
+                curTime = FormatDateTime(dd, "hh:mm:ss");
+            });
+        $("#chat").append("<p>" + curTime + ' : ' + msg + "</p>");
+        trytimes = 0;
+        scrollbm();
+    }
+
+    function scrollbm() {
+        var o = document.getElementById("chat");
+        o.scrollTop = o.scrollHeight;
+        if (trytimes < 3) {
+            trytimes++;
+            setTimeout(scrollbm, 500);
+        }
+
+    }
+    //$.signalR.connectionState
+    //Object {connecting: 0, connected: 1, reconnecting: 2, disconnected: 4}
+    //var timeHubProxy;
+    //var chatHubProxy;
+        // Connect Hubs without the generated proxy
+        //timeHubProxy = $.connection.PascalCasedMyDateTimeHub;
+        //chatHubProxy = $.connection.myChatHub;
+
+        // Register client function to be called by server
+    $.connection.myChatHub.client.appendNewMessage = function (title, message) {
+            addMsg(title, message);
+        };
+
+        // Start the hub connection
+        //addMsg("", "Connecting Hub...");
+        $("#chat").append("<p>" + "Connecting Hub..." + "</p>");
+        $.connection.hub.start().done(function () {
+            addMsg("", "Hub connected.");
+            $.connection.myChatHub.server.joinGroup($.connection.hub.id, 'homepage');
+
+        }).fail(function () {
+            addMsg("", "Could not connect to Hub.");
+        });
+
+    $(document).ready(function () {
+        $.post( "dprocess.ashx", { qid: '3' }, function (data) {
+            if (data != 'null') {//登入成功
+                UserName = data.split(",")[0];
+                Account = data.split(",")[1];
+                //if (chatHubProxy!=undefined)
+                //    chatHubProxy.server.sendLoginMessage(UserName);
+                if (Account == 'A0000') { //Administrator
+                    $("#Admin").css('display', 'block');
+                    $("#adminhref").attr("href", url + "Admin.aspx");
+                }
+                $("#welcome").text("歡迎:" + UserName)
+                $("#welcome").attr("href", "#");
+                $("#logout").text("Log out")
+                auth = 'Yes'; 
+                //$("#matcher").attr("href", url + "match.html");
+                //$("#communicate").attr("href", url + "communicate.html");
+                $("#personal").attr("href", url + "personel.html");
+                $("#upload").attr("href", url + "fileupload.aspx");
+                //$(document).ready(function () {
+                $(".BB").click(function () {
+                    window.location.href = url + "Play.html?" + "type=" + $(this).attr("id");
+                });
+                //});
+                //$(document).ready(function () {
+               $("#logout").click(function () {
+                   $.post(url + "dprocess.ashx", { qid: '5' }, function (data) {
+                        if (data != 'null') {//登出成功
+                            //chatHubProxy.server.sendLogoutMessage(UserName);
+                            location.reload();
+                        }
+                    });
+                });
+                //});
+
+
+
+            }
+            else {
+                if ($("#welcome").text() != "Sign Up")
+                    $("#welcome").text("Sign Up")
+                $("#welcome").attr("href", url + "LoginReg.html?url=" + window.location.href + "&role=reg");
+                if ($("#logout").text() != "Login")
+                    $("#logout").text("Login")
+                $("#logout").attr("href", url + "LoginReg.html?url=" + window.location.href + "&role=login");
+
+            }
+        });
+        //讀取連撥
+        $.get(url + "scheduleRelated.ashx?qid=1", function (data, status) {
+            var obj = JSON.parse(data);
+            HotArray = obj.Hot;
+            NewArray = obj.New;
+            HiGradeArray = obj.Hi;
+            var OLLi;
+            var WrapContent;
+            for (var i = 0; i < HotArray.length; i++) {
+                if (i == 0) {
+                    OLLi = '<li  data-target="#mycarousel" data-slide-to="0" class="active"></li> ';
+                    WarpContent = '<div  class="item active" > '
+                }
+                else {
+                    OLLi = OLLi + '<li  data-target="#mycarousel" data-slide-to="' + i.toString() + '" ></li> ';
+                    WarpContent = WarpContent + '<div  class="item" > '
+                }
+                //if (auth == 'Yes') {
+                    //var filename = HotArray[i].filename;
+                    //if (filename.trim().split('.')[1].toUpperCase() != 'MP4')
+                    //    filename = filename.trim().split('.')[0] + '.mp4';
+
+                    WarpContent = WarpContent + '<a id="' + i.toString() + 'ha" href="' + url + 'play.html?type=' + HotArray[i].vtype + '&mvid=' + HotArray[i].movieid + '&file=' + urlS + HotArray[i].url + HotArray[i].filename + '"><img src="'
+
+                //}
+                //else
+                    //WarpContent = WarpContent + '<a id="' + i.toString() + 'ha" href="#"><img src="'
+
+                WarpContent = WarpContent + urlS + HotArray[i].url + HotArray[i].movieid + '.jpg" width="40%" height="200" alt="Image" style=" margin-left:5%;float:left"></a>' +
+                        '<video  width="40%" height="200" src="' + urlS + HotArray[i].url + HotArray[i].movieid + '.mp4"  controls style="margin-right:5%; float:right;width"></video>' +
+                   '<div class="carousel-caption">' +
+                        '<h3>最熱！！!</h3>' +
+                        '<p>' + HotArray[i].intro.trim() + '</p>' +
+                    '</div>' +
+                '</div>';
+
+            }
+            $('#HotOL').append(OLLi);
+            $('#Wrapper1').append(WarpContent);
+            OLLi = '';
+            WrapContent = '';
+            for (var i = 0; i < NewArray.length; i++) {
+                if (i == 0) {
+                    OLLi = '<li data-target="#myCarousel_1" data-slide-to="0" class="active"></li> ';
+                    WarpContent = '<div  class="item active" > '
+                }
+                else {
+                    OLLi = OLLi + '<li data-target="#myCarousel_1" data-slide-to="' + i.toString() + '" ></li> ';
+                    WarpContent = WarpContent + '<div  class="item" > '
+                }
+                //if (auth == 'Yes')
+                    WarpContent = WarpContent + '<a id="' + i.toString() + 'na" href="' + url + 'play.html?type=' + NewArray[i].vtype + '&mvid=' + NewArray[i].movieid + '&file=' + urlS + NewArray[i].url + NewArray[i].filename + '"><img src="'
+                //else
+                //    WarpContent = WarpContent + '<a id="' + i.toString() + 'na" href="#"><img src="'
+
+                WarpContent = WarpContent + urlS + NewArray[i].url + NewArray[i].movieid + '.jpg" width="40%" height="200" alt="Image" style="margin-left:5%; float:left"></a>' +
+                        '<video  width="40%" height="200" src="' + urlS + NewArray[i].url + NewArray[i].movieid + '.mp4"  controls style="margin-right:5%; float:right;width"></video>' +
+                        '<div class="carousel-caption"> <h3>最新！！!</h3>' +
+                        '<p>' + NewArray[i].intro.trim() + '</p> </div> </div>';
+
+            }
+
+            $('#NewOL').append(OLLi);
+            $('#Wrapper2').append(WarpContent);
+            OLLi = '';
+            WrapContent = '';
+            for (var i = 0; i < HiGradeArray.length; i++) {
+                if (i == 0) {
+                    OLLi = '<li data-target="#myCarousel_2" data-slide-to="0" class="active"></li> ';
+                    WarpContent = '<div  class="item active" > '
+                }
+                else {
+                    OLLi = OLLi + '<li data-target="#myCarousel_2" data-slide-to="' + i.toString() + '" ></li> ';
+                    WarpContent = WarpContent + '<div  class="item" > '
+                }
+                //if (auth == 'Yes')
+                    WarpContent = WarpContent + '<a id="' + i.toString() + 'ga" href="' + url + 'play.html?type=' + HiGradeArray[i].vtype + '&mvid=' + HiGradeArray[i].movieid + '&file=' + urlS + HiGradeArray[i].url + HiGradeArray[i].filename + '"><img src="'
+                //else
+                //    WarpContent = WarpContent + '<a id="' + i.toString() + 'ga" href="#"><img src="'
+
+                WarpContent = WarpContent + urlS + HiGradeArray[i].url + HiGradeArray[i].movieid + '.jpg" width="40%" height="200" alt="Image" style="margin-left:5%; float:left"></a>' +
+                        '<video  width="40%" height="200" src="' + urlS + HiGradeArray[i].url + HiGradeArray[i].movieid + '.mp4"  controls style="margin-right:5%; float:right;width"></video>' +
+                        '<div class="carousel-caption"> <h3>最讚！!</h3>' +
+                        '<p>' + HiGradeArray[i].intro.trim() + '</p> </div> </div>';
+
+            }
+
+            $('#gradeOL').append(OLLi);
+            $('#Wrapper3').append(WarpContent);
+        });
+        //讀取廣告
+        $.get(url + "scheduleRelated.ashx?qid=3", function (data, status) {
+            var obj = JSON.parse(data);
+            var td = "", tr = "", table = "", span = "";
+
+            for (var i in obj) {
+                if (obj[i].MediaType == 'V') {
+                    td += '<td>' + '<video onmouseenter="PlayV(this)"  onmouseleave="PauseV(this)"  width="100%" height="150" controls preload> ' +
+                        '  <source src="' + urlS + obj[i].FileURL + obj[i].filename + '" type="video/mp4">' +
+                    + 'Your browser does not support the video tag.' + '</video>';
+                }
+                else {
+                    td += '<td>' + '<a  href="' + obj[i].WebURL + '" target="_blank"><img src="' + urlS + obj[i].FileURL + obj[i].filename + '" width="100%" height="150" ' +
+                        'alt="' + obj[i].principal + '" ></a>';
+                }
+                td += '<p ondblclick="window.open("' + obj[i].WebURL + '")" style="background-color:cyan; height:80px;overflow:scroll;font-size:small">' + obj[i].Description + '</p>' +
+                '</td>';
+
+                tr += '<tr>' + td + '</tr>';
+
+                td = "";
+
+            }
+
+            tr += '<tr>' + td + '</tr>';
+            table = '<table>' + tr + '</table>';
+
+            tr = "";
+
+            $('#commercial').append(table);
+            //document.onreadystatechange = function () {
+            //    if (document.readyState == "complete") {
+                    $("#maximize").hide();
+                //}
+            //}
+        });
+        //$(".TienV").mouseenter(function () {
+        //    var id = $(this).attr("id");
+        //    var vid = document.getElementById(id);
+        //    vid.play();
+        //});
+        //$(".TienV").mouseeleave(function () {
+        //    var id = $(this).attr("id");
+        //    var vid = document.getElementById(id);
+        //    vid.pause();
+        //});
+
+
+
+    })
+
+ 
+
+</script>

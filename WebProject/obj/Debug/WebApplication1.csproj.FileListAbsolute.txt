@@ -1,0 +1,6 @@
+D:\vs2013Projects\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\vs2013Projects\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\vs2013Projects\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\vs2013Projects\WebApplication1\WebApplication1\bin\log4net.dll
+D:\vs2013Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\vs2013Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb

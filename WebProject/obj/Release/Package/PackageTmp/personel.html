@@ -1,0 +1,849 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的個人資料</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link href="css/thinscroll.css" rel="stylesheet" type="text/css">
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/tableHeadFixer.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+     <!--<script src="Scripts/jquery.signalR-2.3.0.min.js"></script>
+    <script type="text/javascript" src="signalr/hubs"></script>
+    <script type="text/javascript" src="js/dateManupulate.js"></script>-->
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                .tab button.active {
+                    background-color: #ccc;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+        }
+
+        /* Fade in tabs */
+        @-webkit-keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #registry {
+            background-color: lightcyan;
+            /*align-items: center;*/
+        }
+
+        #regEdit {
+            width: 308px;
+            /*width:20%;*/
+            margin-top: 10px;
+            padding: 28px 25px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 20px;
+            margin-left: 300px;
+            top: 10px;
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background-color: lightgreen;
+            font-size: 20px;
+            font-family: 標楷體;
+        }
+        #myTable1 {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background-color: lightgreen;
+            font-size: 20px;
+            font-family: 標楷體;
+        }
+        #myTable2 {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background-color: #ffea00;
+            font-size: 20px;
+            font-family: 標楷體;
+        }
+
+            #myTable th, #myTable td {
+                text-align: left;
+                padding: 2px;
+                border: 1px solid #ddd;
+            }
+
+            #myTable tr {
+                border-bottom: 1px solid #ddd;
+            }
+            #myTable tr.header, #myTable tr:hover {
+                    background-color: #f1f1f1;
+                }
+            #myTable1 th {
+                text-align: left;
+                padding: 2px;
+                border: 1px solid #000;
+            background-color: #ffea00;
+            }
+  
+            #myTable1 tr,#myTable1 td {
+                border-bottom: 1px solid #000;
+                padding: 2px;
+                border: 1px solid #000;
+            }
+
+  
+ 
+            #myTable1 tr.header, #myTable1 tr:hover {
+                    background-color: #f1f1f1;
+                }
+             #myTable2 th {
+                text-align: left;
+                padding: 2px;
+                border: 1px solid #000;
+            background-color: lightgreen;
+            }
+            #myTable2 tr,#myTable2 td {
+                border-bottom: 1px solid #000;
+                padding: 2px;
+                border: 1px solid #000;
+            }
+
+  
+ 
+            #myTable2 tr.header, #myTable2 tr:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .C1 {
+            width: 10%;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+
+        .C2 {
+            width: 15%;
+        }
+
+        .C3 {
+            width: 5%;
+        }
+
+        .C4 {
+            width: 40%;
+        }
+
+        .C5 {
+            width: 13%;
+        }
+
+        .C6 {
+            width: 12%;
+        }
+
+        .C7 {
+            width: 5%;
+        }
+
+        .D1 {
+            width: 8%;
+            cursor: pointer;
+        }
+
+        .D2 {
+            width: 8%;
+        }
+
+        .D3 {
+            width: 5%;
+        }
+
+        .D4 {
+            width: 30%;
+        }
+
+        .D5 {
+            width: 13%;
+        }
+
+        .D6 {
+            width: 8%;
+        }
+
+        .D7 {
+            width: 8%;
+        }
+        .D8 {
+            width: 8%;
+        }
+
+        .D9 {
+            width: 6%;
+        }
+
+        .D10 {
+            width: 10%;
+        }
+
+        .D11 {
+            width: 8%;
+        }
+        .E1 {
+            width: 15%;
+        }
+
+        .E2 {
+            width: 76%;
+        }
+
+        .E3 {
+            width: 8%;
+        }
+
+    </style>
+    <script>
+    $(document).ready(function () {
+        $("#myTable").tableHeadFixer();
+        $("#myTable1").tableHeadFixer();
+    });
+    </script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">資管4A影視平台</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a id="home" onclick="LeavingPage();" href="default.html">Home</a></li>
+                    <li id="Admin" style=" display:none"><a id="adminhref" href="admin.aspx">管理員</a></li>
+                    <li><a id="personal" href="#">我的資料</a></li>
+                    <!--<li><a id="matcher"  href="#">需求媒合</a></li>
+                    <li><a id="communicate" href="#">技術交流</a></li>-->
+                    <li><a id="upload" href="fileupload.aspx">影片上傳</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="welcome" href="javascript:void(0)"><span id="welcomespan" class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a id="logout" href="javascript:void(0)"><span id="logoutspan" class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <h3>我的資料</h3>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'registry')">註冊資料編輯...</button>
+        <button class="tablinks" onclick="openTab(event, 'upFiles')">上傳記錄編輯...</button>
+        <button class="tablinks" onclick="openTab(event, 'history')">觀看記錄...</button>
+    </div>
+
+    <div id="registry" class="tabcontent">
+        <div id="regEdit" style="font-size:20px;float:left;left:50px">
+            <h3>註冊資料編輯...</h3>
+            <form action="dprocess.ashx" id="form" method="post" name="form">
+                <!--<img id="divider" src="images/divider.png">-->
+                <span>會員編號:</span><br /><span id="account"><strong></strong></span><br />
+                <span>會員全名:</span><br /><input id="name" type="text"><br />
+                <span>電子信箱:</span><br /><input id="registeremail" type="text"><br />
+                <span>請輸入舊密碼:</span><input id="chpwd" type="button" value="變更密碼"><br /><input id="oldpassword" style="background-color:magenta;" type="password"><br />
+                <div id="pwdarea" style="display:none">
+                    <span>新密碼 :</span><br /><input id="registerpassword" type="password"><br />
+                    <span>確認密碼:</span><br /><input id="registercpassword" type="password"><br />
+                </div>
+                <span>連絡電話:</span><br /><input id="contact" type="text"><br /><br />
+                <input id="update" type="button" value="更新">
+            </form>
+        </div>
+        <div style="float:right; right:50px;width:40%;font-size:24px">
+            <span>註冊日期:</span><span id="regDate"></span><br /><br />
+            <span>上次離開日期:</span><span id="logOutDate"></span><br /><br />
+            <span>上次觀看影片:</span><span id="lastView"></span><br /><br />
+
+        </div>
+        <br />
+    </div>
+
+    <div id="upFiles" class="tabcontent">
+        <div style="width:50%;float:left;margin-left:3%;">
+            <h4>上傳記錄...</h4>
+            <div style ="max-height:600px;overflow:scroll">
+                <table id="myTable">
+                    <tr>
+                        <th class="C1">影片編號</th>
+                        <th class="C2">影片名稱</th>
+                        <th class="C3">影片類別</th>
+                        <th class="C4">簡介</th>
+                        <th class="C5">演員</th>
+                        <th wclass="C6">上傳日期</th>
+                        <th class="C7">評價</th>
+                    </tr>
+                    <tr>
+                        <td class="C1">Jill</td>
+                        <td class="C2"></td>
+                        <td class="C3">Suspense</td>
+                        <td class="C4"><p style="overflow:scroll">Goson   hdhkjdfs dfjjdsf fdkjhjjdsf dfkjjdjf dfkjjdajf sakjjsaff sakjdf</p></td>
+                        <td class="C5">Jill</td>
+                        <td class="C6"></td>
+                        <td class="C7">50</td>
+                    </tr>
+                </table>
+
+            </div>
+         </div>
+        <div style="width:40%;float:right;margin-right:3%;">
+            <h4>上傳記錄編輯...</h4>
+            <div style="width:100%;height:550px;font-size:20px;font-family:標楷體;background-color:aqua">
+                <br>
+                <span>影片編號：</span><span id="eMvId"></span><br /><br />
+                <span>影片片名：</span><input id="eMvTitle" type="text"><br /><br />
+                <span>影片類別：</span><span id="eTypeName">
+                    <select id="eSelectList">
+                        <option value="A">懸疑</option>
+                        <option value="B">動漫</option>
+                        <option value="C">微電影</option>
+                        <option value="D">動作</option>
+                        <option value="E">喜劇</option>
+                        <option value="F">愛情</option>
+                        <option value="G">科幻</option>
+                        <option value="H">恐怖</option>
+                        <option value="I">教學</option>
+                        <option value="J">其他</option>
+                    </select>
+                </span><br /><br />
+                <span>影片簡介：</span><br /><textarea id="eIntro" style="height:90px;margin-left:15%; width:70%;border:solid;overflow:scroll;background-color:#fff"></textarea><br />
+                <span>演員陣容：</span><input id="eActors" type="text"><br /><br />
+                <span>上傳日期：</span><span id="eDate"></span><br /><br />
+                <div style="margin-left:40%">
+                    <input id="eUpdate" type="button" value="更 新">&nbsp;&nbsp;<input id="eDelete" type="button" value="刪 除">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="history" class="tabcontent">
+        <div style="width:65%;float:left;margin-left:3%;">
+            <h4>觀看記錄...</h4>
+            <div style="width:100%;max-height:500px;overflow-y:scroll;">
+                <table id="myTable1" style="width:100%">
+                    <tr>
+                        <th class="D1">影片編號</th>
+                        <th class="D2">影片名稱</th>
+                        <th class="D3">影片類別</th>
+                        <th class="D4">簡介</th>
+                        <th class="D5">演員</th>
+                        <th class="D6">觀看次數</th>
+                        <th class="D7">評價</th>
+                        <th class="D8">觀看秒數</th>
+                        <th class="D9">是否全部看玩</th>
+                        <th class="D10">觀看日期</th>
+                        <th class="D11">評論</th>
+                    </tr>
+
+                    <tr>
+                        <td class="D1">Jill</td>
+                        <td class="D2"></td>
+                        <td class="D3">Suspense</td>
+                        <td class="D4"><p style="overflow:scroll">Goson   hdhkjdfs dfjjdsf fdkjhjjdsf dfkjjdjf dfkjjdajf sakjjsaff sakjdf</p></td>
+                        <td class="D5">Jill</td>
+                        <td class="D6"></td>
+                        <td class="D7">50</td>
+                        <td class="D8">Jill</td>
+                        <td class="D9"></td>
+                        <td class="D10">50</td>
+                        <td class="D11">50</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div style="width:30%;float:left;margin-left:2%;">
+            <h4>評論記錄...</h4>
+            <span id="commentID"></span><span id="CommentTitle"></span>
+            <div style="width:100%;max-height:500px;overflow-y:scroll;">
+                <table id="myTable2" style="width:100%">
+                    <tr>
+                        <th class="E1">日期</th>
+                        <th class="E2">評論</th>
+                        <th class="E3">刪除</th>
+                    </tr>
+
+                    <tr>
+                        <td class="E1"></td>
+                        <td class="E2"></td>
+                        <td class="E3"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="tclearfix" style="height:60px;background-color:black;left:0px;width:100%;text-align:center;padding-top:20px;clear:both">
+        <p style="color:white;top:20px;left:10px;">Copyright &copy; 2018 S.H.V.P影音平台</p>
+    </div>
+
+    <script>
+        //var aa = $("#regEdit");
+        //var width=aa.width();
+        //var position = aa.position();
+        //aa.css({ left: width + "px" })
+        var UserName, Account;
+        var auth = 'No';
+        var url;
+        var urlS;
+        var gurl = window.location.protocol + "//" + window.location.host;
+        if (window.location.host.indexOf("localhost") >= 0) {
+            url = gurl + "/";
+            urlS = window.location.protocol + "//localhost/";
+        }
+        else {
+            url = gurl + "/";
+            urlS = url;
+        }
+        $.post("dprocess.ashx", { qid: '3' }, function (data) {
+            if (data != '') {//登入成功
+                UserName = data.split(",")[0];
+                Account = data.split(",")[1];
+                if (Account == 'A0000') { //Administrator
+                    $("#Admin").css('display', 'block');
+                }
+                $("#welcome").text("歡迎:" + UserName)
+                $("#welcome").attr("href", "#");
+                $("#logout").text("Log out")
+
+            }
+            else {
+                //window.location.href = url + "LoginReg.html?url=" + window.location.href  + "&role=login";
+            }
+
+        });
+
+        function openTab(evt, idname) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            switch (idname) {
+                case 'registry':
+                    getReg();
+                    break;
+                case 'upFiles':
+                    getUpload();
+                    break;
+                case 'history':
+                    getHistory();
+                    break;
+            }
+            document.getElementById(idname).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        //<span>註冊日期:</span><span id="regDate"></span><br /><br />
+        //<span>上次離開日期:</span><span id="logOutDate"></span><br /><br />
+        //<span>上次觀看影片:</span><span id="lastView"></span><br /><br />
+
+        var lsatMovieID = "";
+        var getReg = function () {
+            $.get("scheduleRelated.ashx?qid=8", function (data, status) {
+                if (data != 'null') {
+                    var obj = JSON.parse(data)[0];
+                    $("#account").text(obj.Account);
+                    $("#name").val(obj.Name);
+                    //$("#oldpassword").val(obj.Password);
+                    $("#registeremail").val(obj.Email);
+                    $("#contact").val(obj.Contact);
+                    $("#regDate").text(obj.RegDate);
+                    $("#logOutDate").text(obj.LastLogout);
+                    if (obj.LastMovieID != null) {
+                        $("#lastView").html('<a href="play.html?type=' + obj.Vtype + '&nvid=' + obj.LastMovieID + '&file=' + urlS + obj.URL + obj.filename + '">' + obj.Title + '</a>');
+                        lsatMovieID = obj.LastMovieID;
+                    }
+                }
+            });
+        };
+
+        var currow = 0;
+
+        var getUpload = function () {
+            $("#myTable tr:gt(0)").remove();
+            var markup = "";
+            //markup += '    <tr>' +
+            //        '<th class="C1">影片編號</th>' +
+            //        '<th class="C2">影片名稱</th>' +
+            //        '<th class="C3">影片類別</th>' +
+            //        '<th class="C4">簡介</th>' +
+            //        '<th class="C5">演員</th>' +
+            //        '<th wclass="C6">上傳日期</th>' +
+            //        '<th class="C7">評價</th>' +
+            //    '</tr>';
+            $.get("scheduleRelated.ashx?qid=9", function (data, status) {
+                if (data != '') {
+                    var obj = JSON.parse(data);
+                    var i = 0;
+                    for (var i = 0; i < obj.length; i++) {
+                        markup += '<tr>' +
+                                 '<td class="C1">' + obj[i].MovieID + '</td>' +
+                                ' <td class="C2">' + obj[i].Title + '</td>' +
+                                 '<td class="C3">' + obj[i].Vtype + '</td>' +
+                                 '<td class="C4"><p style="overflow-x:scroll">' + obj[i].intro + '</p></td>' +
+                                 '<td class="C5">' + obj[i].Actors + '</td>' +
+                                 '<td class="C6">' + obj[i].UploadTime + '</td>' +
+                                 '<td class="C7">' + obj[i].Evaluate + '</td>' +
+                             '</tr>';
+
+                    }
+                    for (var j = i; j < 10; j++) {
+                        markup += '<tr>' +
+                                 '<td class="C1"></td>' +
+                                ' <td class="C2"></td>' +
+                                 '<td class="C3"></td>' +
+                                 '<td class="C4"><p style="overflow-x:scroll"></p></td>' +
+                                 '<td class="C5"></td>' +
+                                 '<td class="C6"></td>' +
+                                 '<td class="C7"></td>' +
+                             '</tr>';
+
+                    }
+                } else {
+                    for (var j = 0; j < 10; j++) {
+                        markup += '<tr>' +
+                                 '<td class="C1"></td>' +
+                                ' <td class="C2"></td>' +
+                                 '<td class="C3"></td>' +
+                                 '<td class="C4"><p style="overflow-x:scroll"></p></td>' +
+                                 '<td class="C5"></td>' +
+                                 '<td class="C6"></td>' +
+                                 '<td class="C7"></td>' +
+                             '</tr>';
+
+                    }
+                }
+                $("#myTable").append(markup);
+                var idlist = ["eMvId", "eMvTitle", "eSelectList", "eIntro", "eActors", "eDate"]
+                $("#myTable tr td").click(function () {
+                    var col = $(this).parent().children().index($(this));
+                    var row = $(this).parent().parent().children().index($(this).parent());
+                    currow = row;
+                    var tr = $('#myTable').find("tr:eq(" + row + ")");
+                    for (var i = 0; i < tr.children().length - 1; i++) {
+                        var id = '#' + idlist[i];
+                        if (i ==0 || i==3|| i==5)
+                            $(id).text($('#myTable').find("tr:eq(" + row + ")").find("td:eq(" + i + ")").text());
+                        else {
+                            $(id).val($("#myTable").find("tr:eq(" + row + ")").find("td:eq(" + i + ")").text());
+                        }
+                    }
+                });
+
+            });
+        };
+
+        var getHistory = function () {
+            $("#myTable1 tr:gt(0)").remove();
+            var markup = "";
+            $.get("scheduleRelated.ashx?qid=10", function (data, status) {
+                if (data != '') {
+                    var obj = JSON.parse(data);
+                    var i = 0;
+                    var yn = ['否', '是'];
+                    for (var i = 0; i < obj.length; i++) {
+                        markup += '<tr>' +
+                                 '<td class="D1"><a href="'+ url + 'play.html?type=' + obj[i].Vtype + '&mvid=' + obj[i].MovieID + '&file=' + urlS+ obj[i].URL +obj[i].filename + '" title="按我前往觀看">' + obj[i].MovieID + '</a></td>' +
+                                ' <td class="D2">' + obj[i].Title + '</td>' +
+                                 '<td class="D3">' + obj[i].VtypeChinese + '</td>' +
+                                 '<td class="D4"><p style="overflow:scroll">' + obj[i].intro + '</p></td>' +
+                                 '<td class="D5">' + obj[i].Actors + '</td>' +
+                                 '<td class="D6">' + obj[i].playcount + '</td>' +
+                                 '<td class="D7">' + obj[i].Evaluate + '</td>' +
+                                '<td class="D8">' + obj[i].PauseAt +'</td>' +
+                                '<td class="D9">' + yn[parseInt(obj[i].complete)] + '</td>' +
+                                '<td class="D10">' + obj[i].WatchTime + '</td>' +
+                                '<td class="D11"><button onclick="CallComment(\'' + obj[i].MovieID +'\')">點看</button> </td>' +
+
+                             '</tr>';
+
+                    }
+                    for (var j = i; j < 10; j++) {
+                        markup += '<tr>' +
+                                 '<td class="D1"></td>' +
+                                ' <td class="D2"></td>' +
+                                 '<td class="D3"></td>' +
+                                 '<td class="D4"><p style="overflow:scroll"></p></td>' +
+                                 '<td class="D5"></td>' +
+                                 '<td class="D6"></td>' +
+                                 '<td class="D7"></td>' +
+                                '<td class="D8"></td>' +
+                                '<td class="D9"></td>' +
+                                '<td class="D10"></td>' +
+                                '<td class="D11"><button>點看</button> </td>' +
+                             '</tr>';
+
+                    }
+                } else {
+                    for (var j = 0; j < 10; j++) {
+                        markup += '<tr>' +
+                                  '<td class="D1"></td>' +
+                                 ' <td class="D2"></td>' +
+                                  '<td class="D3"></td>' +
+                                  '<td class="D4"><p style="overflow:scroll"></p></td>' +
+                                  '<td class="D5"></td>' +
+                                  '<td class="D6"></td>' +
+                                  '<td class="D7"></td>' +
+                                 '<td class="D8"></td>' +
+                                 '<td class="D9"></td>' +
+                                 '<td class="D10"></td>' +
+                                 '<td class="D11"><button>點看</button> </td>' +
+                              '</tr>';
+
+                    }
+                }
+                $("#myTable1").append(markup);
+
+            });
+        };
+
+        function CallComment(mvid) {
+            $("#myTable2 tr:gt(0)").remove();
+            var markup = "";
+            $.get("scheduleRelated.ashx?qid=11&mvid=" + mvid, function (data, status) {
+                if (data != '') {
+                    var obj = JSON.parse(data);
+                    var i = 0;
+                    for (var i = 0; i < obj.length; i++) {
+                        markup += '<tr>' +
+                                 '<td class="E1">' + obj[i].pdate + '</td>' +
+                                ' <td class="E2">' + obj[i].comment + '</td>' +
+                                 '<td class="E3"><button onclick="deleteComment(\'' + obj[i].rid + '\',this)">刪除</button></td>' +
+                             '</tr>';
+
+                    }
+                    for (var j = i; j < 10; j++) {
+                        markup += '<tr>' +
+                                 '<td class="E1"></td>' +
+                                ' <td class="E2"></td>' +
+                                 '<td class="E3"></td>' +
+                             '</tr>';
+
+                    }
+                } else {
+                    for (var j = 0; j < 10; j++) {
+                        markup += '<tr>' +
+                                 '<td class="E1"></td>' +
+                                ' <td class="E2"></td>' +
+                                 '<td class="E3"></td>' +
+                             '</tr>';
+
+                    }
+                }
+                $("#myTable2").append(markup);
+            });
+        }
+        function deleteComment(rid, o) {
+            var r = confirm("確定要刪除？!");
+            if (r != true) return;
+            var row = $(o.parentElement).parent().parent().children().index($(o.parentElement).parent());
+
+            $.post("dprocess.ashx", { qid: 'H', rid: rid }, function (data) {
+                if (data != null) {
+                    $('#myTable2').find("tr:eq(" + row + ")").remove();
+
+                    alert('刪除成功!!');
+                } else {
+                    alert('刪除失敗!!')
+                }
+            });
+
+        };
+        var pwdchange = 0;
+        $("#chpwd").click(function () {
+            if (pwdchange == 0) {
+                $("#pwdarea").show();
+                pwdchange = 1;
+            } else {
+                $("#pwdarea").hide();
+                pwdchange = 0;
+            }
+        });
+
+
+ 
+        //var currow = 0;
+        //var idlist = ["eMvId", "eMvTitle", "eSelectList", "eIntro", "eActors", "eDate"]
+        //$("#myTable tr td").click(function () {
+        //    var col = $(this).parent().children().index($(this));
+        //    var row = $(this).parent().parent().children().index($(this).parent());
+        //    currow = row;
+        //    var tr = $('#myTable').find("tr:eq(" + row + ")");
+        //    for (var i = 0; i < tr.children().length - 1; i++) {
+        //        var id = '#' + idlist[i];
+        //        if (i != 2)
+        //            $(id).text($('#myTable').find("tr:eq(" + row + ")").find("td:eq(" + i + ")").text());
+        //        else {
+        //            $(id).val($("#myTable").find("tr:eq(" + row + ")").find("td:eq(" + i + ")").text());
+        //        }
+        //    }
+        //});
+        $("#eUpdate").click(function () {
+            var r = confirm("確定要變更？!");
+            if (r != true) return;
+            var mvid = $("#eMvId").text();
+            var title = $("#eMvTitle").val();
+            var type = $("#eSelectList").val();
+            var intro = $("#eIntro").val();
+            var actor = $("#eActors").val();
+
+            $.post("dprocess.ashx", { qid: 'F', mvid: mvid, title: title, type: type, intro: intro, actor: actor }, function (data) {
+                if (data != null) {
+                    $('#myTable').find("tr:eq(" + currow + ")").find("td:eq(1)").text(title);
+                    $("#myTable").find("tr:eq(" + currow + ")").find("td:eq(2)").text(type);
+                    $('#myTable').find("tr:eq(" + currow + ")").find("td:eq(3)").text(intro);
+                    $('#myTable').find("tr:eq(" + currow + ")").find("td:eq(4)").text(actor);
+                    var idlist = ["eMvId", "eMvTitle", "eSelectList", "eIntro", "eActors", "eDate"]
+                    $("#myTable tr td").click(function () {
+                        var col = $(this).parent().children().index($(this));
+                        var row = $(this).parent().parent().children().index($(this).parent());
+                        currow = row;
+                        var tr = $('#myTable').find("tr:eq(" + row + ")");
+                        for (var i = 0; i < tr.children().length - 1; i++) {
+                            var id = '#' + idlist[i];
+                            if (i == 0 || i == 3 || i == 5)
+                                $(id).text($('#myTable').find("tr:eq(" + row + ")").find("td:eq(" + i + ")").text());
+                            else {
+                                $(id).val($("#myTable").find("tr:eq(" + row + ")").find("td:eq(" + i + ")").text());
+                            }
+                        }
+                    });
+
+                    alert('更新成功!!');
+                } else {
+                    alert('更新失敗!!')
+                }
+            });
+        });
+
+
+        $("#eDelete").click(function () {
+            var r = confirm("確定要刪除？!");
+            if (r != true) return;
+            var mvid = $('#myTable').find("tr:eq(" + currow + ")").find("td:eq(0)").text();
+            var title = $('#myTable').find("tr:eq(" + currow + ")").find("td:eq(1)").text();
+            $.post("dprocess.ashx", { qid: 'G', mvid: mvid,title:title }, function (data) {
+                if (data != null) {
+                    $('#myTable').find("tr:eq(" + currow + ")").remove();
+
+                    alert('刪除成功!!');
+                } else {
+                    alert('刪除失敗!!')
+                }
+            });
+        });
+        $("#update").click(function () {
+            var emailFilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/i);
+            var email = $("#registeremail").val();
+            var oldpassword = $("#oldpassword").val();
+            var password = $("#registerpassword").val();
+            var cpassword = $("#registercpassword").val();
+            var name = $("#name").val();
+            var contact = $("#contact").val();
+            if ($("#name").val() == '' || $("#registeremail").val() == '' || $("#registerpassword").val() == '' || $("#registercpassword").val() == '' || $("#contact").val() == '') {
+                alert("請輸入所有欄位...!!!!!!");
+            } else if (!(email.match(emailFilter))) {
+                alert("請輸入正確電子信箱...!!!!!!");
+            } else if (pwdchange == 1 && !(password).match(cpassword)) {
+                alert("密碼不匹配. 重試?");
+            } else {
+                $.post("dprocess.ashx", {
+                    qid: E,
+                    name: name,
+                    email: email,
+                    oldpassword: oldpassword,
+                    password: password,
+                    contact: contact
+                }, function (data) {
+                    if (data == "already exist...") {
+                        alert('輸入的電子信箱已被使用...');
+                    } else if (data == 'wrong password...') {
+                        alert("原始密碼輸入錯誤...");
+                    } else if (data == 'OK Registered...') {
+                        alert("您更新成功!!!");
+                    }
+
+                });
+            }
+        });
+
+        $("#logout").click(function () {
+            $.post(url + "dprocess.ashx", { qid: '5' }, function (data) {
+                if (data != 'null') {//登出成功
+                    window.location.href = "default.html";
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

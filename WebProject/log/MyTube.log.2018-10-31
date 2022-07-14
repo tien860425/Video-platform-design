@@ -1,0 +1,4 @@
+2018-10-31 21:01:22,478 INFO 123 WebProject.dprocess - µn¤J:Email=andy@gmail.com; Account:A0003
+2018-10-31 21:05:03,703 INFO 123 WebProject.dprocess - µn¤J:Email=andy@gmail.com; Account:A0003
+2018-10-31 21:14:33,791 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='horro'
+2018-10-31 21:14:33,794 INFO 320 ASP.uploadprogress_aspx - Create MovieID:H-A0003-000001

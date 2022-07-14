@@ -1,0 +1,54 @@
+2018-11-04 10:05:21,740 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 15:17:47,450 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 15:18:09,881 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='Sci-fi'
+2018-11-04 15:18:09,883 INFO 320 ASP.uploadprogress_aspx - Create MovieID:G-A0002-000001
+2018-11-04 15:20:18,009 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 15:20:45,232 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 3 Where  VtypeName='Sci-fi'
+2018-11-04 15:20:45,234 INFO 320 ASP.uploadprogress_aspx - Create MovieID:G-A0002-000002
+2018-11-04 15:40:23,123 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 15:41:07,335 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 4 Where  VtypeName='Sci-fi'
+2018-11-04 15:41:07,337 INFO 320 ASP.uploadprogress_aspx - Create MovieID:G-A0002-000003
+2018-11-04 15:45:15,691 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='comedy'
+2018-11-04 15:45:15,693 INFO 320 ASP.uploadprogress_aspx - Create MovieID:E-A0002-000001
+2018-11-04 16:45:34,590 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 16:46:14,285 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='micrfilm'
+2018-11-04 16:46:14,286 INFO 320 ASP.uploadprogress_aspx - Create MovieID:C-A0002-000001
+2018-11-04 16:48:10,364 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 16:48:36,771 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 2 Where  VtypeName='love'
+2018-11-04 16:48:36,772 INFO 320 ASP.uploadprogress_aspx - Create MovieID:F-A0002-000001
+2018-11-04 16:58:45,620 INFO 123 WebProject.dprocess - 登入:Email=test@yahoo.com; Account:A0002
+2018-11-04 16:59:15,698 INFO 317 ASP.uploadprogress_aspx - update videoType set available=1,  cumulate= 11 Where  VtypeName='Suspense'
+2018-11-04 16:59:15,701 INFO 320 ASP.uploadprogress_aspx - Create MovieID:A-A0002-000010
+2018-11-04 20:06:57,074 INFO 123 WebProject.dprocess - 登入:Email=andy@gmail.com; Account:A0003
+2018-11-04 20:23:03,860 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:23:18,874 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:23:33,889 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:23:48,901 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:24:03,914 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:24:18,943 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:24:33,959 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:24:48,973 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:25:04,006 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:25:19,018 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:25:34,035 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:25:49,062 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:26:04,075 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:26:19,091 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:26:34,103 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:42:14,109 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:42:29,125 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:42:44,142 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:42:59,155 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:43:14,182 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:43:29,198 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:43:44,214 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:43:59,230 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:44:14,250 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:44:29,267 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:44:44,283 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:44:59,296 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:45:14,311 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:45:29,327 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:45:44,343 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:45:59,358 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
+2018-11-04 20:46:14,372 INFO 233 WebProject.scheduleRelated - 已超過連接逾時的設定。在取得集區連接之前超過逾時等待的時間，可能的原因為所有的共用連接已在使用中，並已達共用集區大小的最大值。
